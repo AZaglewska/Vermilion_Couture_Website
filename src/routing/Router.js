@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import MainTemplate from "../templates/MainTemplate";
 import About from "../pages/About";
 import { routes } from "../routes";
 const Router = () => {
@@ -7,7 +8,9 @@ const Router = () => {
     <div>
       <BrowserRouter>
         <Switch>
-          <Route path={routes.about} component={About} />
+          <MainTemplate>
+            <Route path={routes.about} component={About} />
+          </MainTemplate>
         </Switch>
       </BrowserRouter>
     </div>
