@@ -5,6 +5,7 @@ import About from "../pages/About";
 import { routes } from "../routes";
 import { ThemeProvider } from "styled-components";
 import { mainTheme } from "../globalStyles/MainTheme";
+import Home from "../pages/Home";
 const Router = () => {
   return (
     <div>
@@ -12,6 +13,7 @@ const Router = () => {
         <ThemeProvider theme={mainTheme}>
           <Switch>
             <MainTemplate>
+              <Route path={routes.home} component={Home} />
               <Route path={routes.about} component={About} />
             </MainTemplate>
           </Switch>
