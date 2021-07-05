@@ -17,8 +17,8 @@ export const navbarLanguages = {
     {
       main: "Basic",
       dropDown: [
-        { name: "Underbust", route: "/basic-underbust" },
-        { name: "Overbust", route: "/basic-overbust" },
+        { name: "Underbust", route: "/underbust-collection" },
+        { name: "Overbust", route: "/overbust-collection" },
       ],
     },
     { main: "Couture", route: "/couture", dropDown: [] },
