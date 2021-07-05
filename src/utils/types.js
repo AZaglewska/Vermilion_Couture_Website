@@ -1,6 +1,6 @@
 export const dataTypesObj = {
   underbustCorset: "underbustCorset",
-  overbustContent: "overbustContent",
+  overbustContent: "overbustCorset",
   weddingCorset: "weddingCorset",
   eveningCorset: "eveningCorset",
   designerData: "designerData",
@@ -10,7 +10,7 @@ export const dataTypesObj = {
 
 export const dataTypesArray = [
   "underbustCorset",
-  "overbustContent",
+  "overbustCorset",
   "weddingCorset",
   "eveningCorset",
   "designerData",
