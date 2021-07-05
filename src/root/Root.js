@@ -1,10 +1,29 @@
 import React, { useEffect } from "react";
 import Router from "../routing/Router";
 import GlobalStyle from "../globalStyles/GlobalStyle";
+import { connect } from "react-redux";
 import { dataTypesObj, dataTypesArray } from "../utils/types";
 import { client } from "../contentfulConfig.js/contentfulConfig";
+import {
+  getUnderbustCorsetAction,
+  getOverbustCorsetAction,
+  getWeddingCorsetAction,
+  getEveningCorsetAction,
+  getDesignerDataAction,
+  getPublicationsDataAction,
+  getQuestionsAndAnswersDataAction,
+} from "../actions/index";
 
-const Root = () => {
+const Root = ({
+  getUnderbustCorset,
+  getOverbustCorset,
+  getWeddingCorset,
+  getEveningCorset,
+  getDesignerData,
+  getPublicationsData,
+  getQuestionsAndAnswersData,
+  currentLanguage,
+}) => {
   const getContentfulData = (type, data) => {
     const mappedContentfulData = data.map((item) => {
       const { id } = item.sys;
@@ -75,4 +94,19 @@ const Root = () => {
   };
 };
 
-export default Root;
+const mapStateToProps = (state) => ({
+  currentLanguage: state.currentLanguage,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  getUnderbustCorset: (data) => dispatch(getUnderbustCorsetAction(data)),
+  getOverbustCorset: (data) => dispatch(getOverbustCorsetAction(data)),
+  getWeddingCorset: (data) => dispatch(getWeddingCorsetAction(data)),
+  getEveningCorset: (data) => dispatch(getEveningCorsetAction(data)),
+  getDesignerData: (data) => dispatch(getDesignerDataAction(data)),
+  getPublicationsData: (data) => dispatch(getPublicationsDataAction(data)),
+  getQuestionsAndAnswersData: (data) =>
+    dispatch(getQuestionsAndAnswersDataAction(data)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Root);
