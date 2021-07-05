@@ -1,7 +1,8 @@
 import React from "react";
+import ProductList from "../components/ProductList.js/ProductList";
 import { connect } from "react-redux";
 
-const WeddingCollection = ({ currentLanguage }) => {
+const WeddingCollection = ({ wedding, currentLanguage }) => {
   return (
     <div>
       {currentLanguage === "PL" ? (
@@ -9,11 +10,13 @@ const WeddingCollection = ({ currentLanguage }) => {
       ) : (
         <h1>Wedding Collection</h1>
       )}
+      <ProductList corsetData={wedding} />
     </div>
   );
 };
 
 const mapStateToProps = (state) => ({
+  wedding: state.weddingCorset,
   currentLanguage: state.currentLanguage,
 });
 

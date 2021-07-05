@@ -1,7 +1,8 @@
 import React from "react";
+import ProductList from "../components/ProductList.js/ProductList";
 import { connect } from "react-redux";
 
-const OverbustCollection = ({ currentLanguage }) => {
+const OverbustCollection = ({ overbust, currentLanguage }) => {
   return (
     <div>
       {currentLanguage === "PL" ? (
@@ -9,11 +10,13 @@ const OverbustCollection = ({ currentLanguage }) => {
       ) : (
         <h1>Overbust Corsets Collection</h1>
       )}
+      <ProductList corsetData={overbust} />
     </div>
   );
 };
 
 const mapStateToProps = (state) => ({
+  overbust: state.overbustCorset,
   currentLanguage: state.currentLanguage,
 });
 
