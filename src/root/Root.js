@@ -3,7 +3,7 @@ import Router from "../routing/Router";
 import GlobalStyle from "../globalStyles/GlobalStyle";
 import { connect } from "react-redux";
 import { dataTypesObj, dataTypesArray } from "../utils/types";
-import { client } from "../contentfulConfig.js/contentfulConfig";
+import { client } from "../contentful/contentfulConfig";
 import {
   getUnderbustCorsetAction,
   getOverbustCorsetAction,
@@ -67,31 +67,30 @@ const Root = ({
         break;
       default:
     }
-
-    const getAllData = () => {
-      dataTypesArray.forEach((type) => {
-        client
-          .getEntries({
-            content_type: currentLanguage === "ENG" ? `${type}Eng` : type,
-          })
-          .then((response) => {
-            getContentfulData(type, response.items);
-            console.log(response.items);
-          });
-      });
-    };
-
-    useEffect(() => {
-      getAllData();
-    }, [currentLanguage]);
-
-    return (
-      <div>
-        <GlobalStyle />
-        <Router />
-      </div>
-    );
   };
+  const getAllData = () => {
+    dataTypesArray.forEach((type) => {
+      client
+        .getEntries({
+          content_type: currentLanguage === "ENG" ? `${type}Eng` : type,
+        })
+        .then((response) => {
+          getContentfulData(type, response.items);
+          console.log(response.items);
+        });
+    });
+  };
+
+  useEffect(() => {
+    getAllData();
+  }, [currentLanguage]);
+
+  return (
+    <div>
+      <GlobalStyle />
+      <Router />
+    </div>
+  );
 };
 
 const mapStateToProps = (state) => ({
