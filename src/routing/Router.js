@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import MainTemplate from "../templates/MainTemplate";
 import Home from "../pages/Home";
 import About from "../pages/About";
@@ -7,22 +7,28 @@ import EveningCollection from "../pages/EveningCollection";
 import WeddingCollection from "../pages/WeddingCollection";
 import UnderbustCollection from "../pages/UnderbustCollection";
 import OverbustCollection from "../pages/OverbustCollection";
-import Contact from "../pages/Contact";
 import Couture from "../pages/Couture";
+import Contact from "../pages/Contact";
 import SingleProduct from "../pages/SingleProduct";
+import { connect } from "react-redux";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { routes } from "../routes";
 import { ThemeProvider } from "styled-components";
 import { mainTheme } from "../globalStyles/MainTheme";
 
-const Router = () => {
+const Router = ({ currentLanguage }) => {
+  const [localLang, setLocalLang] = useState(currentLanguage);
+  useEffect(() => {
+    setLocalLang(currentLanguage);
+  }, [currentLanguage]);
+
   return (
     <div>
       <BrowserRouter>
         <ThemeProvider theme={mainTheme}>
           <Switch>
             <MainTemplate>
-              <Route path={routes.home} component={Home} />
+              <Route exact path={routes.home} component={Home} />
               <Route path={routes.about} component={About} />
               <Route path={routes.aboutENG} component={About} />
               <Route path={routes.publications} component={Publications} />
@@ -72,4 +78,8 @@ const Router = () => {
   );
 };
 
-export default Router;
+const mapStateToProps = (state) => ({
+  currentLanguage: state.currentLanguage,
+});
+
+export default connect(mapStateToProps)(Router);
