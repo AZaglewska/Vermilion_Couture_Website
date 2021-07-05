@@ -1,11 +1,19 @@
 import React from "react";
+import { connect } from "react-redux";
 
-const EveningCollection = () => {
+const EveningCollection = ({ currentLanguage }) => {
   return (
     <div>
-      <h1>Wieczorowe</h1>
+      {currentLanguage === "PL" ? (
+        <h1>Kolekcja Wieczorowa</h1>
+      ) : (
+        <h1>Evening Collection</h1>
+      )}
     </div>
   );
 };
 
-export default EveningCollection;
+const mapStateToProps = (state) => ({
+  currentLanguage: state.currentLanguage,
+});
+export default connect(mapStateToProps)(EveningCollection);

@@ -1,11 +1,20 @@
 import React from "react";
+import { connect } from "react-redux";
 
-const OverbustCollection = () => {
+const OverbustCollection = ({ currentLanguage }) => {
   return (
     <div>
-      <h1>Overbust</h1>
+      {currentLanguage === "PL" ? (
+        <h1>Kolekcja Gorsetów Overbust</h1>
+      ) : (
+        <h1>Overbust Corsets Collection</h1>
+      )}
     </div>
   );
 };
 
-export default OverbustCollection;
+const mapStateToProps = (state) => ({
+  currentLanguage: state.currentLanguage,
+});
+
+export default connect(mapStateToProps)(OverbustCollection);

@@ -1,11 +1,16 @@
 import React from "react";
+import { connect } from "react-redux";
 
-const Publications = () => {
+const Publications = ({ currentLanguage }) => {
   return (
     <div>
-      <h1>Publikacje</h1>
+      {currentLanguage === "PL" ? <h1>Publikacje</h1> : <h1>Publications</h1>}
     </div>
   );
 };
 
-export default Publications;
+const mapStateToProps = (state) => ({
+  currentLanguage: state.currentLanguage,
+});
+
+export default connect(mapStateToProps)(Publications);

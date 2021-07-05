@@ -1,11 +1,20 @@
 import React from "react";
+import { connect } from "react-redux";
 
-const UnderbustCollection = () => {
+const UnderbustCollection = ({ currentLanguage }) => {
   return (
     <div>
-      <h1>Underbust</h1>
+      {currentLanguage === "PL" ? (
+        <h1>Kolekcja Gorsetów Underbust</h1>
+      ) : (
+        <h1>Underbust Corsets Collection</h1>
+      )}
     </div>
   );
 };
 
-export default UnderbustCollection;
+const mapStateToProps = (state) => ({
+  currentLanguage: state.currentLanguage,
+});
+
+export default connect(mapStateToProps)(UnderbustCollection);

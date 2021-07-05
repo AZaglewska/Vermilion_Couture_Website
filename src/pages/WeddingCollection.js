@@ -1,11 +1,20 @@
 import React from "react";
+import { connect } from "react-redux";
 
-const WeddingCollection = () => {
+const WeddingCollection = ({ currentLanguage }) => {
   return (
     <div>
-      <h1>Ślubne</h1>
+      {currentLanguage === "PL" ? (
+        <h1>Kolekcja Ślubna</h1>
+      ) : (
+        <h1>Wedding Collection</h1>
+      )}
     </div>
   );
 };
 
-export default WeddingCollection;
+const mapStateToProps = (state) => ({
+  currentLanguage: state.currentLanguage,
+});
+
+export default connect(mapStateToProps)(WeddingCollection);
