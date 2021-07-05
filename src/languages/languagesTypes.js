@@ -21,7 +21,7 @@ export const navbarLanguages = {
         { name: "Overbust", route: "/basic-overbust" },
       ],
     },
-    { main: "Go Ready To Wear", route: "/go-ready-to-wear", dropDown: [] },
+    { main: "Couture", route: "/couture", dropDown: [] },
 
     {
       main: "Contact",
@@ -49,12 +49,12 @@ export const navbarLanguages = {
     {
       main: "Kolekcja podstawowa",
       dropDown: [
-        { name: "Underbust", route: "/basic-underbust" },
-        { name: "Overbust", route: "/basic-overbust" },
+        { name: "Underbust", route: "/kolekcja-underbust" },
+        { name: "Overbust", route: "/kolekcja-overbust" },
       ],
     },
 
-    { main: "Go Ready To Wear", route: "/go-ready-to-wear", dropDown: [] },
+    { main: "Couture", route: "/couture", dropDown: [] },
 
     {
       main: "Kontakt",
