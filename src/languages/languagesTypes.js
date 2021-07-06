@@ -77,10 +77,10 @@ export const footerLanguages = {
     links: {
       title: "Information",
       linksArray: [
-        { name: "FAQ", route: "/questions-and-answers" },
-        { name: "Tkaniny ENG", route: "/" },
-        { name: "Jak się zmierzyć ENG", route: "/" },
-        { name: "Szycie na miarę ENG", route: "/" },
+        { name: "FAQ", route: "/frequently-asked-questions" },
+        { name: "Fabrics", route: "/" },
+        { name: "How to Measure", route: "/" },
+        { name: "Tailored Sewing", route: "/" },
       ],
     },
   },
