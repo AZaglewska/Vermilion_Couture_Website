@@ -63,3 +63,45 @@ export const navbarLanguages = {
     },
   ],
 };
+
+export const footerLanguages = {
+  ENG: {
+    contact: {
+      title: "Contact",
+      content: [
+        "email: vermilionteam@gmail.com",
+        "phone:(+48) 22 619 23 49",
+        "Thu.- Fri. 11:00-19:00 Sat. 12:00 – 17:00",
+      ],
+    },
+    links: {
+      title: "Information",
+      linksArray: [
+        { name: "FAQ", route: "/questions-and-answers" },
+        { name: "Tkaniny ENG", route: "/" },
+        { name: "Jak się zmierzyć ENG", route: "/" },
+        { name: "Szycie na miarę ENG", route: "/" },
+      ],
+    },
+  },
+
+  PL: {
+    contact: {
+      title: "Kontakt",
+      content: [
+        "email: vermilionteam@gmail.com",
+        "telefon:(+48) 22 619 23 49",
+        "wt.- pt. 11:00-19:00 sob. 12:00 – 17:00",
+      ],
+    },
+    links: {
+      title: "Informacje",
+      linksArray: [
+        { name: "FAQ", route: "/pytania-i-odpowiedzi" },
+        { name: "Tkaniny ", route: "/" },
+        { name: "Jak się zmierzyć ", route: "/" },
+        { name: "Szycie na miarę ", route: "/" },
+      ],
+    },
+  },
+};
