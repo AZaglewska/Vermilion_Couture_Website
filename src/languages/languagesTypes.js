@@ -78,7 +78,7 @@ export const footerLanguages = {
       title: "Information",
       linksArray: [
         { name: "FAQ", route: "/frequently-asked-questions" },
-        { name: "Fabrics", route: "/" },
+        { name: "Fabrics", route: "/fabrics" },
         { name: "How to Measure", route: "/" },
         { name: "Tailored Sewing", route: "/" },
       ],
@@ -98,7 +98,7 @@ export const footerLanguages = {
       title: "Informacje",
       linksArray: [
         { name: "FAQ", route: "/pytania-i-odpowiedzi" },
-        { name: "Tkaniny ", route: "/" },
+        { name: "Tkaniny ", route: "/tkaniny" },
         { name: "Jak się zmierzyć ", route: "/" },
         { name: "Szycie na miarę ", route: "/" },
       ],
