@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import MainTemplate from "../templates/MainTemplate";
 import Home from "../pages/Home";
-import About from "../pages/About";
-import Publications from "../pages/Publications";
+import AboutPage from "../pages/AboutPage";
+import PublicationsPage from "../pages/PublicationsPage";
 import EveningCollection from "../pages/EveningCollection";
 import WeddingCollection from "../pages/WeddingCollection";
 import UnderbustCollection from "../pages/UnderbustCollection";
@@ -29,10 +29,13 @@ const Router = ({ currentLanguage }) => {
           <Switch>
             <MainTemplate>
               <Route exact path={routes.home} component={Home} />
-              <Route path={routes.about} component={About} />
-              <Route path={routes.aboutENG} component={About} />
-              <Route path={routes.publications} component={Publications} />
-              <Route path={routes.publicationsENG} component={Publications} />
+              <Route path={routes.about} component={AboutPage} />
+              <Route path={routes.aboutENG} component={AboutPage} />
+              <Route path={routes.publications} component={PublicationsPage} />
+              <Route
+                path={routes.publicationsENG}
+                component={PublicationsPage}
+              />
               <Route
                 path={routes.eveningCollection}
                 component={EveningCollection}
