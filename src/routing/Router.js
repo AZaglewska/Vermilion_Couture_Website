@@ -11,6 +11,7 @@ import Couture from "../pages/Couture";
 import Contact from "../pages/Contact";
 import SingleProduct from "../pages/SingleProduct";
 import AskedQuestionsPage from "../pages/AskedQuestionsPage";
+import FabricsPage from "../pages/FabricsPage";
 import { connect } from "react-redux";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { routes } from "../routes";
@@ -82,6 +83,8 @@ const Router = ({ currentLanguage }) => {
                 path={routes.askedQuestionsENG}
                 component={AskedQuestionsPage}
               />
+              <Route path={routes.fabrics} component={FabricsPage} />
+              <Route path={routes.fabricsENG} component={FabricsPage} />
             </MainTemplate>
           </Switch>
         </ThemeProvider>

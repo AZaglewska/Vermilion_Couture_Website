@@ -18,4 +18,6 @@ export const routes = {
   singleProduct: "/product/:productName",
   askedQuestions: "/pytania-i-odpowiedzi",
   askedQuestionsENG: "/frequently-asked-questions",
+  fabrics: "/tkaniny",
+  fabricsENG: "/fabrics",
 };
