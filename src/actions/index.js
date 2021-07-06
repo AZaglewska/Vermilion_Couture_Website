@@ -35,6 +35,11 @@ export const getPublicationsDataAction = (data) => ({
   payload: data,
 });
 
+export const getFabricsDataAction = (data) => ({
+  type: actionsTypes.GET_FABRICS_DATA,
+  payload: data,
+});
+
 export const getQuestionsAndAnswersDataAction = (data) => ({
   type: actionsTypes.GET_QUESTIONS_AND_ANSWERS_DATA,
   payload: data,
