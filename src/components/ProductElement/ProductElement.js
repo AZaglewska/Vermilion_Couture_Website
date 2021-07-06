@@ -1,11 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {
+  CarouselImage,
+  CarouselElement,
+  CarouselImgWrapper,
+} from "./ProductElementStyles.js";
 
 const ProductElement = ({
-  corsetDataElement: { name, images, price, priceSecond, description },
+  corsetDataElement: { id, name, images, price, priceSecond, description },
 }) => {
   return (
-    <div>
+    <CarouselElement key={id}>
       <Link
         to={{
           pathname: `/product/${name.replace(/\s/g, "")}`,
@@ -18,9 +23,11 @@ const ProductElement = ({
           },
         }}
       >
-        <img src={images[0]} />
+        <CarouselImgWrapper>
+          <CarouselImage src={images[0]} />
+        </CarouselImgWrapper>
       </Link>
-    </div>
+    </CarouselElement>
   );
 };
 
