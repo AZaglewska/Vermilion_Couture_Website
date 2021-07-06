@@ -11,6 +11,7 @@ import {
   getEveningCorsetAction,
   getDesignerDataAction,
   getPublicationsDataAction,
+  getFabricsDataAction,
   getQuestionsAndAnswersDataAction,
 } from "../actions/index";
 
@@ -21,6 +22,7 @@ const Root = ({
   getEveningCorset,
   getDesignerData,
   getPublicationsData,
+  getFabricsData,
   getQuestionsAndAnswersData,
   currentLanguage,
 }) => {
@@ -65,6 +67,10 @@ const Root = ({
       case dataTypesObj.questionsAndAnswersData:
         getQuestionsAndAnswersData([...mappedContentfulData]);
         break;
+
+      case dataTypesObj.fabricsData:
+        getFabricsData([...mappedContentfulData]);
+        break;
       default:
     }
   };
@@ -104,6 +110,7 @@ const mapDispatchToProps = (dispatch) => ({
   getEveningCorset: (data) => dispatch(getEveningCorsetAction(data)),
   getDesignerData: (data) => dispatch(getDesignerDataAction(data)),
   getPublicationsData: (data) => dispatch(getPublicationsDataAction(data)),
+  getFabricsData: (data) => dispatch(getFabricsDataAction(data)),
   getQuestionsAndAnswersData: (data) =>
     dispatch(getQuestionsAndAnswersDataAction(data)),
 });
