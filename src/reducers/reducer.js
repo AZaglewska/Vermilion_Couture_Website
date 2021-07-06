@@ -8,6 +8,7 @@ const initialState = {
   eveningCorset: [],
   designerData: [],
   publicationsData: [],
+  fabricsData: [],
   questionsAndAnswersData: [],
 };
 
@@ -60,6 +61,11 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         questionsAndAnswersData: [...payload],
+      };
+    case actionsTypes.GET_FABRICS_DATA:
+      return {
+        ...state,
+        fabricsData: [...payload],
       };
 
     default:
