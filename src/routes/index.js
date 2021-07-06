@@ -16,4 +16,6 @@ export const routes = {
   contact: "/kontakt",
   contactENG: "/contact",
   singleProduct: "/product/:productName",
+  askedQuestions: "/pytania-i-odpowiedzi",
+  askedQuestionsENG: "/frequently-asked-questions",
 };

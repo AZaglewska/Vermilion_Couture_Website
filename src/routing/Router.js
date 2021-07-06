@@ -10,6 +10,7 @@ import OverbustCollection from "../pages/OverbustCollection";
 import Couture from "../pages/Couture";
 import Contact from "../pages/Contact";
 import SingleProduct from "../pages/SingleProduct";
+import AskedQuestionsPage from "../pages/AskedQuestionsPage";
 import { connect } from "react-redux";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { routes } from "../routes";
@@ -73,6 +74,14 @@ const Router = ({ currentLanguage }) => {
               <Route path={routes.contact} component={Contact} />
               <Route path={routes.contactENG} component={Contact} />
               <Route path={routes.singleProduct} component={SingleProduct} />
+              <Route
+                path={routes.askedQuestions}
+                component={AskedQuestionsPage}
+              />
+              <Route
+                path={routes.askedQuestionsENG}
+                component={AskedQuestionsPage}
+              />
             </MainTemplate>
           </Switch>
         </ThemeProvider>
