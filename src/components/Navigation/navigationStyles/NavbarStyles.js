@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { show } from "../../../globalStyles/Animations";
 
 export const NavContainer = styled.div`
   display: flex;
@@ -159,6 +160,7 @@ export const Dropdown = styled.div`
   :hover {
     ${DropdownContent} {
       display: block;
+      animation: ${show} 0.7s ease forwards;
     }
     ${DropdownLink} {
       color: ${({ theme }) => theme.colors.goldBeige};
