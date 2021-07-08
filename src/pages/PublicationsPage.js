@@ -2,10 +2,9 @@ import React from "react";
 import Publications from "../components/MappedPages/Publications";
 import { connect } from "react-redux";
 
-const PublicationsPage = ({ currentLanguage, publicationsData }) => {
+const PublicationsPage = ({ publicationsData }) => {
   return (
     <div>
-      {currentLanguage === "PL" ? <h1>Publikacje</h1> : <h1>Publications</h1>}
       <Publications publicationsData={publicationsData} />
     </div>
   );
@@ -13,7 +12,6 @@ const PublicationsPage = ({ currentLanguage, publicationsData }) => {
 
 const mapStateToProps = (state) => ({
   publicationsData: state.publicationsData,
-  currentLanguage: state.currentLanguage,
 });
 
 export default connect(mapStateToProps)(PublicationsPage);
