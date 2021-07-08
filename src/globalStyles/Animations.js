@@ -32,7 +32,20 @@ export const lineAnimation = keyframes`
 
   100% {
     opacity: 1;
-    width: 80%;
+    width: 68%;
+  }
+
+`;
+
+export const lineAnimation2 = keyframes`
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+
+  100% {
+    opacity: 1;
+    width: 86%;
   }
 
 `;
