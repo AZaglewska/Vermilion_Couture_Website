@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { lineAnimation, show } from "../../../globalStyles/Animations";
+import { show } from "../../../globalStyles/Animations";
 
 export const StyledAboutList = styled.li`
   display: flex;
@@ -34,15 +34,4 @@ export const StyledAboutImg = styled.img`
 export const StyledTitleContainer = styled.div`
   align-self: flex-start;
   margin-bottom: ${({ theme }) => theme.margins.l};
-`;
-
-export const StyledLine = styled.div`
-  border-bottom: 1.2px solid;
-  border-color: ${({ theme }) => theme.colors.darkGrey};
-  width: 80%;
-  margin: ${({ theme }) => theme.margins.l} 0;
-  animation: ${lineAnimation} 0.1s ease forwards;
-  opacity: 0;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
 `;
