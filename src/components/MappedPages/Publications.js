@@ -1,8 +1,18 @@
 import React from "react";
+import Title from "../../atoms/Title";
+import Text from "../../atoms/Text";
+import Line from "../../atoms/Line";
+import {
+  StyledPublicationsList,
+  StyledPublicationsElements,
+  StyledTitleContainer,
+  StyledPublicationsContainer,
+  StyledPublicationsImg,
+} from "./MappedPagesStyles/PublicationsStyles";
 
 const Publications = ({ publicationsData }) => {
   return (
-    <div>
+    <>
       <ul>
         {publicationsData.map((publicationsDataElement) => {
           const {
@@ -15,19 +25,35 @@ const Publications = ({ publicationsData }) => {
           } = publicationsDataElement;
 
           return (
-            <li key={id}>
-              <h1>{name}</h1>
-              <img src={images[0]} />
-              <p>{articleFirst}</p>
-              <img src={images[1]} />
-              <p>{articleSecond}</p>
-              <img src={images[2]} />
-              <p>{articleThird}</p>
-            </li>
+            <StyledPublicationsList key={id}>
+              <StyledPublicationsContainer>
+                <StyledPublicationsImg src={images[0]} />
+                <StyledPublicationsElements>
+                  <StyledTitleContainer>
+                    <Title>{name}</Title>
+                  </StyledTitleContainer>
+                  <Text>{articleFirst}</Text>
+                </StyledPublicationsElements>
+              </StyledPublicationsContainer>
+              <Line styleType="publications" />
+              <StyledPublicationsContainer>
+                <StyledPublicationsElements>
+                  <Text>{articleSecond}</Text>
+                </StyledPublicationsElements>
+                <StyledPublicationsImg src={images[1]} />
+              </StyledPublicationsContainer>
+              <Line styleType="publications" />
+              <StyledPublicationsContainer>
+                <StyledPublicationsImg src={images[2]} />
+                <StyledPublicationsElements>
+                  <Text>{articleThird}</Text>
+                </StyledPublicationsElements>
+              </StyledPublicationsContainer>
+            </StyledPublicationsList>
           );
         })}
       </ul>
-    </div>
+    </>
   );
 };
 
