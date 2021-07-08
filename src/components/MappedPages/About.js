@@ -1,13 +1,13 @@
 import React from "react";
 import Title from "../../atoms/Title";
 import Text from "../../atoms/Text";
+import Line from "../../atoms/Line";
 import {
   StyledAboutList,
   StyledAboutContainer,
   StyledAboutElements,
   StyledAboutImg,
   StyledTitleContainer,
-  StyledLine,
 } from "./MappedPagesStyles/AboutStyles";
 
 const About = ({ designerData }) => {
@@ -29,7 +29,7 @@ const About = ({ designerData }) => {
                   <Text>{articleFirst}</Text>
                 </StyledAboutElements>
               </StyledAboutContainer>
-              <StyledLine />
+              <Line styleType="about" />
               <StyledAboutContainer>
                 <StyledAboutElements>
                   <Text>{articleSecond}</Text>
