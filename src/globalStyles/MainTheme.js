@@ -4,12 +4,20 @@ export const mainTheme = {
     dark: "#353530",
     light: "#f7f7f7",
     goldBeige: "#ecdbba",
+    darkGrey: "6f7e7c",
+    smokey: "#666666",
+  },
+
+  margins: {
+    s: "10px",
+    m: "20px",
+    l: "30px",
+    xl: "40px",
   },
 
   fontSizes: {
-    xxs: "8px",
     xs: "12px",
-    s: "16px",
+    s: "15px",
     m: "20px",
     l: "24px",
     xl: "30px",
