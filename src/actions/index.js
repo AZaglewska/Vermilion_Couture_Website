@@ -25,6 +25,21 @@ export const getEveningCorsetAction = (data) => ({
   payload: data,
 });
 
+export const getMeshCorsetAction = (data) => ({
+  type: actionsTypes.GET_MESH_CORSET_DATA,
+  payload: data,
+});
+
+export const getSilkCorsetAction = (data) => ({
+  type: actionsTypes.GET_SILK_CORSET_DATA,
+  payload: data,
+});
+
+export const getOtherCorsetAction = (data) => ({
+  type: actionsTypes.GET_OTHER_CORSET_DATA,
+  payload: data,
+});
+
 export const getDesignerDataAction = (data) => ({
   type: actionsTypes.GET_DESIGNER_DATA,
   payload: data,
