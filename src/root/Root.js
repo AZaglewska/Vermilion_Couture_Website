@@ -13,6 +13,9 @@ import {
   getPublicationsDataAction,
   getFabricsDataAction,
   getQuestionsAndAnswersDataAction,
+  getMeshCorsetAction,
+  getSilkCorsetAction,
+  getOtherCorsetAction,
 } from "../actions/index";
 
 const Root = ({
@@ -20,6 +23,9 @@ const Root = ({
   getOverbustCorset,
   getWeddingCorset,
   getEveningCorset,
+  getMeshCorset,
+  getSilkCorset,
+  getOtherCorset,
   getDesignerData,
   getPublicationsData,
   getFabricsData,
@@ -46,7 +52,6 @@ const Root = ({
       case dataTypesObj.underbustCorset:
         getUnderbustCorset([...mappedContentfulData]);
         break;
-
       case dataTypesObj.overbustContent:
         getOverbustCorset([...mappedContentfulData]);
         break;
@@ -56,18 +61,24 @@ const Root = ({
       case dataTypesObj.eveningCorset:
         getEveningCorset([...mappedContentfulData]);
         break;
-
+      case dataTypesObj.meshCorset:
+        getMeshCorset([...mappedContentfulData]);
+        break;
+      case dataTypesObj.silkCorset:
+        getSilkCorset([...mappedContentfulData]);
+        break;
+      case dataTypesObj.otherCorset:
+        getOtherCorset([...mappedContentfulData]);
+        break;
       case dataTypesObj.designerData:
         getDesignerData([...mappedContentfulData]);
         break;
-
       case dataTypesObj.publicationsData:
         getPublicationsData([...mappedContentfulData]);
         break;
       case dataTypesObj.questionsAndAnswersData:
         getQuestionsAndAnswersData([...mappedContentfulData]);
         break;
-
       case dataTypesObj.fabricsData:
         getFabricsData([...mappedContentfulData]);
         break;
@@ -108,6 +119,9 @@ const mapDispatchToProps = (dispatch) => ({
   getOverbustCorset: (data) => dispatch(getOverbustCorsetAction(data)),
   getWeddingCorset: (data) => dispatch(getWeddingCorsetAction(data)),
   getEveningCorset: (data) => dispatch(getEveningCorsetAction(data)),
+  getMeshCorset: (data) => dispatch(getMeshCorsetAction(data)),
+  getSilkCorset: (data) => dispatch(getSilkCorsetAction(data)),
+  getOtherCorset: (data) => dispatch(getOtherCorsetAction(data)),
   getDesignerData: (data) => dispatch(getDesignerDataAction(data)),
   getPublicationsData: (data) => dispatch(getPublicationsDataAction(data)),
   getFabricsData: (data) => dispatch(getFabricsDataAction(data)),
