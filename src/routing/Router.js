@@ -7,6 +7,9 @@ import EveningCollection from "../pages/EveningCollection";
 import WeddingCollection from "../pages/WeddingCollection";
 import UnderbustCollection from "../pages/UnderbustCollection";
 import OverbustCollection from "../pages/OverbustCollection";
+import MeshCollection from "../pages/MeshCollection";
+import SilkCollection from "../pages/SilkCollection";
+import OtherCollection from "../pages/OtherCollection";
 import Couture from "../pages/Couture";
 import Contact from "../pages/Contact";
 import SingleProduct from "../pages/SingleProduct";
@@ -62,7 +65,6 @@ const Router = ({ currentLanguage }) => {
                 path={routes.underbustCollectionENG}
                 component={UnderbustCollection}
               />
-
               <Route
                 path={routes.overbustCollection}
                 component={OverbustCollection}
@@ -70,6 +72,24 @@ const Router = ({ currentLanguage }) => {
               <Route
                 path={routes.overbustCollectionENG}
                 component={OverbustCollection}
+              />
+              <Route path={routes.meshCollection} component={MeshCollection} />
+              <Route
+                path={routes.meshCollectionENG}
+                component={MeshCollection}
+              />
+              <Route path={routes.silkCollection} component={SilkCollection} />
+              <Route
+                path={routes.silkCollectionENG}
+                component={SilkCollection}
+              />
+              <Route
+                path={routes.otherCollection}
+                component={OtherCollection}
+              />
+              <Route
+                path={routes.otherCollectionENG}
+                component={OtherCollection}
               />
               <Route path={routes.couture} component={Couture} />
               <Route path={routes.contact} component={Contact} />
