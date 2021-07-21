@@ -21,7 +21,14 @@ export const navbarLanguages = {
         { name: "Overbust", route: "/overbust-collection" },
       ],
     },
-    { main: "Couture", route: "/couture", dropDown: [] },
+    {
+      main: "Couture",
+      dropDown: [
+        { name: "Mesh", route: "/mesh-collection" },
+        { name: "Silk", route: "/silk-collection" },
+        { name: "Other", route: "/other-collection" },
+      ],
+    },
 
     {
       main: "Contact",
@@ -54,7 +61,14 @@ export const navbarLanguages = {
       ],
     },
 
-    { main: "Couture", route: "/couture", dropDown: [] },
+    {
+      main: "Couture",
+      dropDown: [
+        { name: "Transparentne", route: "/kolekcja-transparentna" },
+        { name: "Jedwabne", route: "/kolekcja-jedwabna" },
+        { name: "Inne", route: "/kolekcja-inne" },
+      ],
+    },
 
     {
       main: "Kontakt",
