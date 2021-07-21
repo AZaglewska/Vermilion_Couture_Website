@@ -6,6 +6,9 @@ const initialState = {
   overbustCorset: [],
   weddingCorset: [],
   eveningCorset: [],
+  meshCorset: [],
+  silkCorset: [],
+  otherCorset: [],
   designerData: [],
   publicationsData: [],
   fabricsData: [],
@@ -43,6 +46,24 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         eveningCorset: [...payload],
+      };
+
+    case actionsTypes.GET_MESH_CORSET_DATA:
+      return {
+        ...state,
+        meshCorset: [...payload],
+      };
+
+    case actionsTypes.GET_SILK_CORSET_DATA:
+      return {
+        ...state,
+        silkCorset: [...payload],
+      };
+
+    case actionsTypes.GET_OTHER_CORSET_DATA:
+      return {
+        ...state,
+        otherCorset: [...payload],
       };
 
     case actionsTypes.GET_DESIGNER_DATA:
