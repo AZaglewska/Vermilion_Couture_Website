@@ -1,12 +1,18 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import { lineAnimation, lineAnimation2 } from "../globalStyles/Animations";
+import {
+  lineAnimation,
+  lineAnimation2,
+  lineAnimation3,
+} from "../globalStyles/Animations";
 
 const StyledLine = styled.div`
-  border-bottom: 1.2px solid;
-  border-color: ${({ theme }) => theme.colors.darkGrey};
-  margin: ${({ theme }) => theme.margins.l} 0;
-  opacity: 0;
+  margin-top: ${(props) => (props.second ? "40px" : "10px")};
+  border-bottom: 2.5px solid;
+  border-color: ${({ theme }) => theme.colors.goldBeige};
+  animation: ${lineAnimation3} 0.1s ease forwards;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
 
   ${({ styleType }) =>
     styleType === "about" &&
@@ -14,6 +20,7 @@ const StyledLine = styled.div`
       animation: ${lineAnimation} 0.1s ease forwards;
       animation-duration: 3s;
       animation-fill-mode: forwards;
+      border-color: ${({ theme }) => theme.colors.goldBeige};
     `}
 
   ${({ styleType }) =>
@@ -23,10 +30,62 @@ const StyledLine = styled.div`
       animation-duration: 3s;
       animation-fill-mode: forwards;
     `}
+
+    ${({ styleType }) =>
+    styleType === "product" &&
+    css`
+      margin-top: 10px;
+      border-bottom: 2.5px solid;
+      border-color: ${({ theme }) => theme.colors.goldBeige};
+      animation: ${lineAnimation2} 0.1s ease forwards;
+      animation-duration: 3s;
+      animation-fill-mode: forwards;
+    `}
+    ${({ styleType }) =>
+    styleType === "questions" &&
+    css`
+      margin-top: ${(props) => (props.second ? "40px" : "10px")};
+      border-bottom: 2.5px solid;
+      border-color: ${({ theme }) => theme.colors.goldBeige};
+      animation: ${lineAnimation3} 0.1s ease forwards;
+      animation-duration: 3s;
+      animation-fill-mode: forwards;
+    `}
+
+    ${({ styleType }) =>
+    styleType === "greyLine" &&
+    css`
+      margin-top: ${({ theme }) => theme.margins.xs};
+      border-bottom: 1.5px solid;
+      border-color: ${({ theme }) => theme.colors.smokey};
+      animation: ${lineAnimation} 0.1s ease forwards;
+      animation-duration: 3s;
+      animation-fill-mode: forwards;
+    `}
+
+
+    ${({ styleType }) =>
+    styleType === "card" &&
+    css`
+      margin-top: ${({ theme }) => theme.margins.m};
+      border-bottom: 1.5px solid;
+      border-color: ${({ theme }) => theme.colors.smokey};
+      animation: ${lineAnimation2} 0.1s ease forwards;
+      animation-duration: 3s;
+      animation-fill-mode: forwards;
+    `}
 `;
 
-const Line = ({ children, styleType }) => {
-  return <StyledLine styleType={styleType}>{children}</StyledLine>;
+//  animation: ${(props) =>
+//props.card ? `${lineAnimation3}` : `${lineAnimation}`}
+//0.1s ease forwards;
+
+const Line = ({ children, styleType, second }) => {
+  return (
+    <StyledLine styleType={styleType} second={second}>
+      {children}
+    </StyledLine>
+  );
 };
 
 export default Line;
