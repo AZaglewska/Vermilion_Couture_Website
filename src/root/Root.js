@@ -16,6 +16,7 @@ import {
   getMeshCorsetAction,
   getSilkCorsetAction,
   getOtherCorsetAction,
+  getMeasuringDataAction,
 } from "../actions/index";
 
 const Root = ({
@@ -30,6 +31,7 @@ const Root = ({
   getPublicationsData,
   getFabricsData,
   getQuestionsAndAnswersData,
+  getMeasuringData,
   currentLanguage,
 }) => {
   const getContentfulData = (type, data) => {
@@ -82,6 +84,9 @@ const Root = ({
       case dataTypesObj.fabricsData:
         getFabricsData([...mappedContentfulData]);
         break;
+      case dataTypesObj.measuringData:
+        getMeasuringData([...mappedContentfulData]);
+        break;
       default:
     }
   };
@@ -127,6 +132,7 @@ const mapDispatchToProps = (dispatch) => ({
   getFabricsData: (data) => dispatch(getFabricsDataAction(data)),
   getQuestionsAndAnswersData: (data) =>
     dispatch(getQuestionsAndAnswersDataAction(data)),
+  getMeasuringData: (data) => dispatch(getMeasuringDataAction(data)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Root);
