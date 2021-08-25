@@ -59,3 +59,8 @@ export const getQuestionsAndAnswersDataAction = (data) => ({
   type: actionsTypes.GET_QUESTIONS_AND_ANSWERS_DATA,
   payload: data,
 });
+
+export const getMeasuringDataAction = (data) => ({
+  type: actionsTypes.GET_MEASURING_DATA,
+  payload: data,
+});
