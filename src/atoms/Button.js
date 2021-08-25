@@ -2,8 +2,6 @@ import React from "react";
 import styled, { css } from "styled-components";
 
 const StyledButton = styled.button`
-  color: white;
-  padding: 10px 20px;
   outline: none;
 
   ${({ flagIcon }) =>
@@ -15,13 +13,7 @@ const StyledButton = styled.button`
       border: none;
       background-size: 60%;
       background-position: 50% 24%;
-
-      /* margin: 0px 10px; */
-      /* padding: 15px; */
-
-      /* @media (max-width: 682px) {
-        background-size: 60%;
-      } */
+      padding: 20px;
     `};
 `;
 
