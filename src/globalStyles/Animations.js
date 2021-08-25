@@ -45,7 +45,19 @@ export const lineAnimation2 = keyframes`
 
   100% {
     opacity: 1;
-    width: 86%;
+    width: 90%;
+  }
+
+`;
+
+export const lineAnimation3 = keyframes`
+  0% {
+    width: 0;
+  }
+
+  100% {
+    opacity: 1;
+    width: 100%;
   }
 
 `;
