@@ -1,17 +1,34 @@
 import React from "react";
+import Title from "../atoms/Title";
+import Line from "../atoms/Line";
+import {
+  CollectionContent,
+  CollectionWrapper,
+  CollectionElements,
+} from "./pagesStyles/CollectionStyles";
 import ProductList from "../components/ProductList.js/ProductList";
 import { connect } from "react-redux";
 
 const WeddingCollection = ({ wedding, currentLanguage }) => {
   return (
-    <div>
-      {currentLanguage === "PL" ? (
-        <h1>Kolekcja Ślubna</h1>
-      ) : (
-        <h1>Wedding Collection</h1>
-      )}
+    <CollectionContent>
+      <CollectionWrapper>
+        <CollectionElements>
+          <Title>
+            {currentLanguage === "PL"
+              ? "Kolekcja Ślubna"
+              : "Wedding Collection"}
+          </Title>
+          <Line />
+        </CollectionElements>
+      </CollectionWrapper>
       <ProductList corsetData={wedding} />
-    </div>
+      <CollectionWrapper>
+        <CollectionElements>
+          <Line />
+        </CollectionElements>
+      </CollectionWrapper>
+    </CollectionContent>
   );
 };
 

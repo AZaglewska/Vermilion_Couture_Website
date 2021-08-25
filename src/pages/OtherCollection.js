@@ -1,17 +1,32 @@
 import React from "react";
+import Title from "../atoms/Title";
+import Line from "../atoms/Line";
+import {
+  CollectionContent,
+  CollectionWrapper,
+  CollectionElements,
+} from "./pagesStyles/CollectionStyles";
 import ProductList from "../components/ProductList.js/ProductList";
 import { connect } from "react-redux";
 
 const OtherCollection = ({ other, currentLanguage }) => {
   return (
-    <div>
-      {currentLanguage === "PL" ? (
-        <h1>Kolekcja Inne</h1>
-      ) : (
-        <h1>Other Collection</h1>
-      )}
+    <CollectionContent>
+      <CollectionWrapper>
+        <CollectionElements>
+          <Title>
+            {currentLanguage === "PL" ? "Kolekcja Inne" : "Other Collection"}
+          </Title>
+          <Line />
+        </CollectionElements>
+      </CollectionWrapper>
       <ProductList corsetData={other} />
-    </div>
+      <CollectionWrapper>
+        <CollectionElements>
+          <Line />
+        </CollectionElements>
+      </CollectionWrapper>
+    </CollectionContent>
   );
 };
 

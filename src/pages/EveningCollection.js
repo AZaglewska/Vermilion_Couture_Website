@@ -1,17 +1,34 @@
 import React from "react";
+import Title from "../atoms/Title";
+import Line from "../atoms/Line";
+import {
+  CollectionContent,
+  CollectionWrapper,
+  CollectionElements,
+} from "./pagesStyles/CollectionStyles";
 import ProductList from "../components/ProductList.js/ProductList";
 import { connect } from "react-redux";
 
 const EveningCollection = ({ evening, currentLanguage }) => {
   return (
-    <div>
-      {currentLanguage === "PL" ? (
-        <h1>Kolekcja Wieczorowa</h1>
-      ) : (
-        <h1>Evening Collection</h1>
-      )}
+    <CollectionContent>
+      <CollectionWrapper>
+        <CollectionElements>
+          <Title>
+            {currentLanguage === "PL"
+              ? "Kolekcja Wieczorowa"
+              : "Evening Collection"}
+          </Title>
+          <Line />
+        </CollectionElements>
+      </CollectionWrapper>
       <ProductList corsetData={evening} />
-    </div>
+      <CollectionWrapper>
+        <CollectionElements>
+          <Line />
+        </CollectionElements>
+      </CollectionWrapper>
+    </CollectionContent>
   );
 };
 
