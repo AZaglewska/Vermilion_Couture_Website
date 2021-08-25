@@ -4,18 +4,28 @@ export const mainTheme = {
     dark: "#353530",
     light: "#f7f7f7",
     goldBeige: "#ecdbba",
+    pureBeige: "rgb(233, 227, 220)",
     darkGrey: "6f7e7c",
     smokey: "#666666",
+    lightGrey: "#999999",
+    darkTransparent: "rgba(0, 0, 0, 0.3)",
+    softGrey: "#dcdcdc",
+    darkBrown: "#403d39",
+    redAlert: "#ba0021",
+    greenAlert: "#2e8b57",
   },
 
   margins: {
+    xs: "5px",
     s: "10px",
     m: "20px",
     l: "30px",
     xl: "40px",
+    xxl: "50px",
   },
 
   fontSizes: {
+    xxs: "10px",
     xs: "12px",
     s: "15px",
     m: "20px",
@@ -33,6 +43,6 @@ export const mainTheme = {
   },
 
   fontFamily: {
-    //   mainFont: "Roboto",
+    mainFont: "Neue Hans Kendrick Regular",
   },
 };
