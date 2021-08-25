@@ -1,29 +1,28 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { navbarLanguages } from "../../languages/languagesTypes";
-import VermilionLogo from "../../assets/logo/VermilionLogo.svg";
 import Button from "../../atoms/Button";
 import flagIconPL from "../../assets/icons/poland.svg";
+import LogoIcon from "../IconComponents/LogoIcon/LogoIcon";
 import flagIconEN from "../../assets/icons/united-kingdom.svg";
+import IconArrowUp from "../IconComponents/IconArrowUp/IconArrowUp";
+import IconArrowDown from "../IconComponents/IconArrowDown/IconArrowDown";
 import { routes } from "../../routes";
 import {
-  NavContainer,
-  LogoContainer,
-  NavLink,
-  Dropdown,
-  Dropbtn,
-  DropdownContent,
-  DropdownContentLink,
-  StyledElementsConatainer,
-  StyledButtonContainer,
-  StyledIconContainer,
-  IconArrowDown,
-  IconArrowUp,
-  DropdownLink,
+  NavIconContent,
+  NavIconWrapper,
+  NavDropdownContainer,
+  NavDropdown,
+  NavDropbtn,
+  NavDropbtnLink,
+  NavDropdownContent,
+  NavDropdownContentLink,
 } from "./navigationStyles/NavbarStyles.js";
 import { connect } from "react-redux";
 import { setCurrentLanguage } from "../../actions";
-import IconSvg from "../IconSvg/IconSvg";
+import HamburgerMenu from "./HamburgerMenu";
+import IconList from "../IconComponents/IconList/IconList";
+
 const Navbar = ({ currentLanguage, setEngLanguage, setPlLanguage }) => {
   const [navLanguage, setNavLanguage] = useState([...navbarLanguages.PL]);
 
@@ -32,55 +31,57 @@ const Navbar = ({ currentLanguage, setEngLanguage, setPlLanguage }) => {
   }, [currentLanguage]);
 
   return (
-    <div>
-      <StyledElementsConatainer>
-        <StyledButtonContainer>
+    <>
+      <NavIconContent>
+        <NavIconWrapper flag>
           <Link to={routes.home}>
             <Button onClickFn={setPlLanguage} flagIcon={flagIconPL} />
           </Link>
           <Link to={routes.home}>
             <Button onClickFn={setEngLanguage} flagIcon={flagIconEN} />
           </Link>
-        </StyledButtonContainer>
-        <LogoContainer>
+        </NavIconWrapper>
+        <NavIconWrapper>
           <Link to={routes.home}>
-            <img src={VermilionLogo} />
+            <LogoIcon />
           </Link>
-        </LogoContainer>
-        <StyledIconContainer>
-          <IconSvg />
-        </StyledIconContainer>
-      </StyledElementsConatainer>
-      <NavContainer>
+        </NavIconWrapper>
+        <NavIconWrapper list>
+          <IconList />
+        </NavIconWrapper>
+      </NavIconContent>
+      <NavDropdownContainer>
         {navLanguage.map((item) => {
           return (
-            <Dropdown>
+            <NavDropdown>
               {item.dropDown.length !== 0 ? (
-                <Dropbtn>
-                  <DropdownLink>{item.main}</DropdownLink>
-                  <IconArrowDown />
+                <NavDropbtn>
+                  <NavDropbtnLink>{item.main}</NavDropbtnLink>
+                  <IconArrowDown nav />
                   <IconArrowUp />
-                </Dropbtn>
+                </NavDropbtn>
               ) : (
-                <NavLink to={item.route}>{item.main}</NavLink>
+                <NavDropbtn>
+                  <NavDropbtnLink to={item.route}>{item.main}</NavDropbtnLink>
+                </NavDropbtn>
               )}
-
               {item.dropDown.length !== 0 && (
-                <DropdownContent>
+                <NavDropdownContent>
                   {item.dropDown.map((item) => {
                     return (
-                      <DropdownContentLink to={item.route}>
+                      <NavDropdownContentLink to={item.route}>
                         {item.name}
-                      </DropdownContentLink>
+                      </NavDropdownContentLink>
                     );
                   })}
-                </DropdownContent>
+                </NavDropdownContent>
               )}
-            </Dropdown>
+            </NavDropdown>
           );
         })}
-      </NavContainer>
-    </div>
+      </NavDropdownContainer>
+      <HamburgerMenu />
+    </>
   );
 };
 
