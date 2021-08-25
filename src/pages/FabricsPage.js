@@ -5,9 +5,7 @@ import { connect } from "react-redux";
 const FabricsPage = ({ fabricsData, currentLanguage }) => {
   return (
     <div>
-      {currentLanguage === "PL" ? <h1>Tkaniny</h1> : <h1>Fabrics</h1>}
-
-      <Fabrics fabricsData={fabricsData} />
+      <Fabrics fabricsData={fabricsData} currentLanguage={currentLanguage} />
     </div>
   );
 };
