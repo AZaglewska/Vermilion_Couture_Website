@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { show } from "../../../globalStyles/Animations";
 
 export const StyledAboutList = styled.li`
   display: flex;
@@ -11,6 +10,7 @@ export const StyledAboutList = styled.li`
 export const StyledAboutContainer = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
 `;
 
 export const StyledAboutElements = styled.div`
@@ -20,15 +20,6 @@ export const StyledAboutElements = styled.div`
   align-items: center;
   flex-direction: column;
   margin: 0 ${({ theme }) => theme.margins.xl};
-`;
-
-export const StyledAboutImg = styled.img`
-  width: 300px;
-  height: 60vh;
-  animation: ${show} 0.1s ease forwards;
-  opacity: 0;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
 `;
 
 export const StyledTitleContainer = styled.div`
