@@ -13,6 +13,7 @@ const initialState = {
   publicationsData: [],
   fabricsData: [],
   questionsAndAnswersData: [],
+  measuringData: [],
 };
 
 const reducer = (state = initialState, action) => {
@@ -87,6 +88,12 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         fabricsData: [...payload],
+      };
+
+    case actionsTypes.GET_MEASURING_DATA:
+      return {
+        ...state,
+        measuringData: [...payload],
       };
 
     default:
