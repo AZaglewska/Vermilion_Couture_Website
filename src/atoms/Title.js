@@ -1,20 +1,53 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { titleAnimation } from "../globalStyles/Animations";
 
 const StyledTitle = styled.h1`
   color: ${({ theme }) => theme.colors.darkGrey};
-  font-size: 30px;
   font-size: ${({ theme }) => theme.fontSizes.xxl};
   opacity: 0;
   position: relative;
   animation: ${titleAnimation} 0.1s ease forwards;
   animation-duration: 3s;
   animation-fill-mode: forwards;
+  font-weight: ${({ theme }) => theme.fontWeight.light};
+
+  @media (max-width: 430px) {
+    font-size: ${({ theme }) => theme.fontSizes.xl};
+  }
+
+  ${({ styleType }) =>
+    styleType === "product" &&
+    css`
+      font-weight: ${({ theme }) => theme.fontWeight.light};
+    `}
+
+  ${({ styleType }) =>
+    styleType === "form" &&
+    css`
+      font-size: ${({ theme }) => theme.fontSizes.xl};
+      color: ${({ theme }) => theme.colors.darkBrown};
+      @media (max-width: 430px) {
+        font-size: ${({ theme }) => theme.fontSizes.l};
+      }
+      @media (max-width: 320px) {
+        font-size: ${({ theme }) => theme.fontSizes.m};
+      }
+    `}
+
+    ${({ styleType }) =>
+    styleType === "card" &&
+    css`
+      font-size: ${({ theme }) => theme.fontSizes.xl};
+      color: ${({ theme }) => theme.colors.smokey};
+      @media (max-width: 430px) {
+        font-size: ${({ theme }) => theme.fontSizes.l};
+      }
+    `}
 `;
 
-const Title = ({ children }) => {
-  return <StyledTitle>{children}</StyledTitle>;
+const Title = ({ children, styleType }) => {
+  return <StyledTitle styleType={styleType}>{children}</StyledTitle>;
 };
 
 export default Title;
