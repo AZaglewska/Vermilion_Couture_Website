@@ -1,14 +1,16 @@
 import React from "react";
 import Footer from "../components/Navigation/Footer";
 import Navbar from "../components/Navigation/Navbar";
+import OfferCard from "../components/OfferCard/OfferCard";
 
 const MainTemplate = ({ children }) => {
   return (
-    <div>
+    <>
       <Navbar />
       {children}
+      <OfferCard />
       <Footer />
-    </div>
+    </>
   );
 };
 
