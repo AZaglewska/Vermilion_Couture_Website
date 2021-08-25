@@ -26,4 +26,8 @@ export const routes = {
   askedQuestionsENG: "/frequently-asked-questions",
   fabrics: "/tkaniny",
   fabricsENG: "/fabrics",
+  measuring: "/jak-pobrać-wymiary",
+  measuringENG: "/how-to-take-measurements",
+  privacyPolicyPL: "/polityka-prywatności",
+  privacyPolicyENG: "/privacy-policy",
 };

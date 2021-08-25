@@ -15,6 +15,9 @@ import Contact from "../pages/Contact";
 import SingleProduct from "../pages/SingleProduct";
 import AskedQuestionsPage from "../pages/AskedQuestionsPage";
 import FabricsPage from "../pages/FabricsPage";
+import MeasuringPage from "../pages/MeasuringPage";
+import PrivacyPolicyPL from "../components/MappedPages/PrivacyPolicyPL";
+import PrivacyPolicyENG from "../components/MappedPages/PrivacyPolicyENG";
 import { connect } from "react-redux";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { routes } from "../routes";
@@ -105,6 +108,16 @@ const Router = ({ currentLanguage }) => {
               />
               <Route path={routes.fabrics} component={FabricsPage} />
               <Route path={routes.fabricsENG} component={FabricsPage} />
+              <Route path={routes.measuring} component={MeasuringPage} />
+              <Route path={routes.measuringENG} component={MeasuringPage} />
+              <Route
+                path={routes.privacyPolicyPL}
+                component={PrivacyPolicyPL}
+              />
+              <Route
+                path={routes.privacyPolicyENG}
+                component={PrivacyPolicyENG}
+              />
             </MainTemplate>
           </Switch>
         </ThemeProvider>
