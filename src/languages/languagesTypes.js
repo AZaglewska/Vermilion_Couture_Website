@@ -82,19 +82,18 @@ export const footerLanguages = {
   ENG: {
     contact: {
       title: "Contact",
-      content: [
-        "email: vermilionteam@gmail.com",
-        "phone:(+48) 22 619 23 49",
-        "Thu.- Fri. 11:00-19:00 Sat. 12:00 – 17:00",
-      ],
+      content: ["vermilionteam@gmail.com"],
     },
     links: {
       title: "Information",
       linksArray: [
         { name: "FAQ", route: "/frequently-asked-questions" },
         { name: "Fabrics", route: "/fabrics" },
-        { name: "How to Measure", route: "/" },
-        { name: "Tailored Sewing", route: "/" },
+        {
+          name: "How to take measurements",
+          route: "/how-to-take-measurements",
+        },
+        { name: "Privacy Policy", route: "/privacy-policy" },
       ],
     },
   },
@@ -102,19 +101,15 @@ export const footerLanguages = {
   PL: {
     contact: {
       title: "Kontakt",
-      content: [
-        "email: vermilionteam@gmail.com",
-        "telefon:(+48) 22 619 23 49",
-        "wt.- pt. 11:00-19:00 sob. 12:00 – 17:00",
-      ],
+      content: ["vermilionteam@gmail.com"],
     },
     links: {
       title: "Informacje",
       linksArray: [
         { name: "FAQ", route: "/pytania-i-odpowiedzi" },
         { name: "Tkaniny ", route: "/tkaniny" },
-        { name: "Jak się zmierzyć ", route: "/" },
-        { name: "Szycie na miarę ", route: "/" },
+        { name: "Jak pobrać wymiary", route: "/jak-pobrać-wymiary" },
+        { name: "Polityka Prywatności", route: "/polityka-prywatności" },
       ],
     },
   },
