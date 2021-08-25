@@ -10,6 +10,7 @@ export const dataTypesObj = {
   publicationsData: "publicationsData",
   fabricsData: "fabricsData",
   questionsAndAnswersData: "questionsAndAnswers",
+  measuringData: "measuringData",
 };
 
 export const dataTypesArray = [
@@ -24,4 +25,5 @@ export const dataTypesArray = [
   "publicationsData",
   "fabricsData",
   "questionsAndAnswers",
+  "measuringData",
 ];
