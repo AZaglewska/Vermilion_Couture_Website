@@ -1,19 +1,26 @@
 import React from "react";
-import styled from "styled-components";
-import { show } from "../globalStyles/Animations";
+import styled, { css } from "styled-components";
 
 const StyledText = styled.p`
-  color: ${({ theme }) => theme.colors.smokey};
+  color: ${({ theme }) => theme.colors.lightGrey};
   font-size: ${({ theme }) => theme.fontSizes.s};
-  opacity: 0;
-  animation: ${show} 0.1s ease forwards;
-  animation-duration: 3s;
-  animation-delay: 0.2s;
-  animation-fill-mode: forwards;
+  line-height: 25px;
+  margin-top: ${(props) => (props.marginTop ? "15px" : "none")};
+
+  ${({ styleType }) =>
+    styleType === "biggerText" &&
+    css`
+      margin: ${({ theme }) => theme.margins.l} 0;
+      font-size: 17px;
+    `}
 `;
 
-const Text = ({ children }) => {
-  return <StyledText>{children}</StyledText>;
+const Text = ({ children, marginTop, styleType }) => {
+  return (
+    <StyledText marginTop={marginTop} styleType={styleType}>
+      {children}
+    </StyledText>
+  );
 };
 
 export default Text;
