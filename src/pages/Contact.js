@@ -1,14 +1,12 @@
 import React from "react";
-import { connect } from "react-redux";
+import ContactForm from "../components/ContactForm/ContactForm";
 
-const Contact = ({ currentLanguage }) => {
+const Contact = () => {
   return (
-    <div>{currentLanguage === "PL" ? <h1>Kontakt</h1> : <h1>Contact</h1>}</div>
+    <>
+      <ContactForm />
+    </>
   );
 };
 
-const mapStateToProps = (state) => ({
-  currentLanguage: state.currentLanguage,
-});
-
-export default connect(mapStateToProps)(Contact);
+export default Contact;
