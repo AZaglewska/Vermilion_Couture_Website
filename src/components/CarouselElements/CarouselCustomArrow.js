@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 const LeftArrow = styled.i`
   position: absolute !important;
-  left: 10px;
+  left: 25px;
   z-index: 1;
-  border: 1px solid grey;
+  border: 1px solid ${({ theme }) => theme.colors.lightGrey};
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 6px;
@@ -14,15 +14,15 @@ const LeftArrow = styled.i`
   transform: rotate(135deg);
 
   &:hover {
-    opacity: 1;
+    opacity: 0.6;
   }
 `;
 
 const RightArrow = styled.i`
   position: absolute !important;
-  right: 10px;
+  right: 25px;
   z-index: 1;
-  border: 1px solid grey;
+  border: 1px solid ${({ theme }) => theme.colors.lightGrey};
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 6px;
@@ -30,12 +30,12 @@ const RightArrow = styled.i`
   cursor: pointer;
   transform: rotate(-45deg);
   &:hover {
-    opacity: 1;
+    opacity: 0.6;
   }
 `;
 
 const CustomLeftArrow = ({ onClick }) => (
-  <LeftArrow onClick={() => onClick()} className="custom-left-arrow" />
+  <LeftArrow onClick={() => onClick()} />
 );
 const CustomRightArrow = ({ onClick }) => {
   return <RightArrow onClick={() => onClick()} />;
