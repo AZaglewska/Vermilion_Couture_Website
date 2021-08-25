@@ -1,17 +1,34 @@
 import React from "react";
+import Title from "../atoms/Title";
+import Line from "../atoms/Line";
+import {
+  CollectionContent,
+  CollectionWrapper,
+  CollectionElements,
+} from "./pagesStyles/CollectionStyles";
 import ProductList from "../components/ProductList.js/ProductList";
 import { connect } from "react-redux";
 
 const UnderbustCollection = ({ currentLanguage, underbust }) => {
   return (
-    <div>
-      {currentLanguage === "PL" ? (
-        <h1>Kolekcja Gorsetów Underbust</h1>
-      ) : (
-        <h1>Underbust Corsets Collection</h1>
-      )}
+    <CollectionContent>
+      <CollectionWrapper>
+        <CollectionElements>
+          <Title>
+            {currentLanguage === "PL"
+              ? "Kolekcja Gorsetów Underbust"
+              : "Underbust Corsets Collection"}
+          </Title>
+          <Line />
+        </CollectionElements>
+      </CollectionWrapper>
       <ProductList corsetData={underbust} />
-    </div>
+      <CollectionWrapper>
+        <CollectionElements>
+          <Line />
+        </CollectionElements>
+      </CollectionWrapper>
+    </CollectionContent>
   );
 };
 

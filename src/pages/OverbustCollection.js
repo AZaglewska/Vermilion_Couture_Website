@@ -1,17 +1,34 @@
 import React from "react";
+import Title from "../atoms/Title";
+import Line from "../atoms/Line";
+import {
+  CollectionContent,
+  CollectionWrapper,
+  CollectionElements,
+} from "./pagesStyles/CollectionStyles";
 import ProductList from "../components/ProductList.js/ProductList";
 import { connect } from "react-redux";
 
 const OverbustCollection = ({ overbust, currentLanguage }) => {
   return (
-    <div>
-      {currentLanguage === "PL" ? (
-        <h1>Kolekcja Gorsetów Overbust</h1>
-      ) : (
-        <h1>Overbust Corsets Collection</h1>
-      )}
+    <CollectionContent>
+      <CollectionWrapper>
+        <CollectionElements>
+          <Title>
+            {currentLanguage === "PL"
+              ? "Kolekcja Gorsetów Overbust"
+              : "Overbust Corsets Collection"}
+          </Title>
+          <Line />
+        </CollectionElements>
+      </CollectionWrapper>
       <ProductList corsetData={overbust} />
-    </div>
+      <CollectionWrapper>
+        <CollectionElements>
+          <Line />
+        </CollectionElements>
+      </CollectionWrapper>
+    </CollectionContent>
   );
 };
 
