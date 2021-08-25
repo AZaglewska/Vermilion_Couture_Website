@@ -1,106 +1,45 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { StyledLogo } from "../../IconComponents/LogoIcon/LogoIconStyles";
+import { StyledIconArrowDown } from "../../IconComponents/IconArrowDown/IconArrowDown";
+import { StyledIconArrowUp } from "../../IconComponents/IconArrowUp/IconArrowUp";
 import { show } from "../../../globalStyles/Animations";
 
-export const NavContainer = styled.div`
+export const NavIconContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+  padding: 10px 40px;
+  width: 100%;
+`;
+
+export const NavIconWrapper = styled.div`
+  @media (max-width: 540px) {
+    display: ${({ list }) => (list ? "none" : "")};
+    width: ${(props) => (props.flag ? "5%" : "95%")};
+  }
+
+  :hover {
+    ${StyledLogo} {
+      fill: ${({ theme }) => theme.colors.goldBeige};
+    }
+  }
+`;
+
+export const NavDropdownContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-size: 14px;
   height: 12vh;
-`;
 
-export const StyledElementsConatainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid lightgray;
-  padding: 15px;
-`;
-
-export const StyledButtonContainer = styled.div`
-  margin: 0 20px;
-`;
-
-export const StyledIconContainer = styled.div`
-  margin: 0 20px;
-`;
-
-export const LogoContainer = styled.div`
-  img {
-    width: 50px;
-  }
-`;
-
-export const DropdownLink = styled.div`
-  text-decoration: none;
-  color: ${({ theme }) => theme.colors.dark};
-  font-size: ${({ theme }) => theme.fontSizes.s};
-  display: inline-block;
-  position: relative;
-  padding: 0;
-
-  :hover {
-    color: ${({ theme }) => theme.colors.goldBeige};
-  }
-
-  &:after {
-    content: "";
+  @media (max-width: 768px) {
     display: none;
-    width: 0;
-    height: 1px;
-    background-color: ${({ theme }) => theme.colors.goldBeige};
-    transition: width 0.3s;
-    position: absolute;
-    top: 78%;
-  }
-
-  &:hover:after {
-    width: 100%;
-    transition: 0.3s;
   }
 `;
 
-export const NavLink = styled(Link)`
-  text-decoration: none;
-  color: ${({ theme }) => theme.colors.dark};
-  font-size: ${({ theme }) => theme.fontSizes.s};
-  display: inline-block;
-  position: relative;
-  padding: 16px 0px;
-
-  :hover {
-    color: ${({ theme }) => theme.colors.goldBeige};
-  }
-
-  &:after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 1px;
-    background-color: ${({ theme }) => theme.colors.goldBeige};
-    transition: width 0.3s;
-    position: absolute;
-    top: 78%;
-  }
-
-  &:hover:after {
-    width: 100%;
-    transition: 0.3s;
-  }
-`;
-
-export const IconArrowDown = styled(IoIosArrowDown)`
-  margin: 0 10px;
-`;
-
-export const IconArrowUp = styled(IoIosArrowUp)`
-  display: none;
-  margin: 0 10px;
-`;
-
-export const Dropbtn = styled.button`
+export const NavDropbtn = styled.button`
   color: ${({ theme }) => theme.colors.dark};
   font-size: ${({ theme }) => theme.fontSizes.s};
   background-color: transparent;
@@ -112,6 +51,10 @@ export const Dropbtn = styled.button`
     color: ${({ theme }) => theme.colors.goldBeige};
   }
 
+  :focus {
+    color: ${({ theme }) => theme.colors.goldBeige};
+  }
+
   &:after {
     content: "";
     display: block;
@@ -124,65 +67,70 @@ export const Dropbtn = styled.button`
   }
 `;
 
-export const DropdownContent = styled.div`
-  display: none;
-  position: absolute;
-  background-color: white;
-  min-width: 100%;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 10;
-
-  a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    color: ${({ theme }) => theme.colors.goldBeige};
-
-    :hover {
-      background-color: #f7f8fa;
-    }
-  }
-`;
-
-export const DropdownContentLink = styled(Link)`
+export const NavDropbtnLink = styled(Link)`
   text-decoration: none;
   color: ${({ theme }) => theme.colors.dark};
   font-size: ${({ theme }) => theme.fontSizes.s};
   display: inline-block;
   position: relative;
-  padding: 16px 0px;
 `;
 
-export const Dropdown = styled.div`
+export const NavDropdownContent = styled.div`
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+`;
+
+export const NavDropdownContentLink = styled(Link)`
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.lightGrey};
+  font-size: ${({ theme }) => theme.fontSizes.s};
+  display: block;
   position: relative;
-  display: inline-block;
+  padding: 16px 10px;
+  width: 150px;
+  transition: ease 1s;
+
   :hover {
-    ${DropdownContent} {
+    color: ${({ theme }) => theme.colors.goldBeige};
+  }
+  :focus {
+    color: ${({ theme }) => theme.colors.goldBeige};
+  }
+`;
+
+export const NavDropdown = styled.div`
+  position: relative;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+  :hover {
+    ${NavDropdownContent} {
       display: block;
       animation: ${show} 0.7s ease forwards;
     }
-    ${DropdownLink} {
+    ${NavDropbtnLink} {
       color: ${({ theme }) => theme.colors.goldBeige};
     }
 
-    ${NavLink} {
-      color: ${({ theme }) => theme.colors.goldBeige};
-    }
-    ${Dropbtn} {
+    ${NavDropbtn} {
       :after {
         width: 100%;
         transition: 0.3s;
       }
     }
 
-    ${IconArrowDown} {
+    ${StyledIconArrowDown} {
       display: none;
     }
 
-    ${IconArrowUp} {
+    ${StyledIconArrowUp} {
       display: inline-block;
       color: ${({ theme }) => theme.colors.goldBeige};
+      margin: -2px 3px;
     }
   }
 `;
