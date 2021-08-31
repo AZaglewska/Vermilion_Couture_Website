@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import backgroundImage from "../../../assets/images/background/IMG_8950-Edit.jpg";
 import { show } from "../../../globalStyles/Animations";
 
 export const StyledQuestionsList = styled.ul`
@@ -17,14 +16,6 @@ export const StyledQuestionsElement = styled.li`
   margin: ${({ theme }) => theme.margins.xl} 0;
 `;
 
-export const StyledQuestionsBackground = styled.div`
-  background-image: url(${backgroundImage});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 90% 39%;
-  height: 50vh;
-  width: 100%;
-`;
 export const StyledQuestionsContent = styled.div`
   display: flex;
   flex-direction: column;
@@ -38,4 +29,8 @@ export const StyledQuestion = styled.p`
   color: ${({ theme }) => theme.colors.smokey};
   margin: ${({ theme }) => theme.margins.s} 0;
   margin-top: ${(props) => (props.first ? "30px" : "10px")};
+
+  @media (max-width: 430px) {
+    font-size: ${({ theme }) => theme.fontSizes.m};
+  }
 `;
