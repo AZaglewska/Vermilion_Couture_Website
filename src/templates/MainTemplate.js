@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import AnimatedLogo from "../components/AnimatedLogo/AnimatedLogo";
 import Footer from "../components/Navigation/Footer";
 import Navbar from "../components/Navigation/Navbar";
