@@ -25,6 +25,10 @@ box-sizing: border-box;
         cursor: pointer;
     }
 
+    ul {
+        list-style: none
+    }
+
 `;
 
 export default GlobalStyle;
