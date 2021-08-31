@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import MainTemplate from "../templates/MainTemplate";
 import Home from "../pages/Home";
 import AboutPage from "../pages/AboutPage";
@@ -24,12 +24,7 @@ import { routes } from "../routes";
 import { ThemeProvider } from "styled-components";
 import { mainTheme } from "../globalStyles/MainTheme";
 
-const Router = ({ currentLanguage }) => {
-  const [localLang, setLocalLang] = useState(currentLanguage);
-  useEffect(() => {
-    setLocalLang(currentLanguage);
-  }, [currentLanguage]);
-
+const Router = () => {
   return (
     <div>
       <BrowserRouter>
