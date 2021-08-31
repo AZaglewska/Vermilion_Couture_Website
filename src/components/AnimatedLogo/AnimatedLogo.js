@@ -6,10 +6,9 @@ import {
   StyledAnimatedSubtitle,
 } from "./AnimatedLogoStyles";
 
-const AnimatedLogo = (props) => {
-  const { isShown } = props;
+const AnimatedLogo = () => {
   return (
-    <StyledAnimatedLogoContainer isShown={isShown}>
+    <StyledAnimatedLogoContainer>
       <StyledAnimatedLogo viewBox="0 0 50 40 ">
         <path
           className="path-one"
