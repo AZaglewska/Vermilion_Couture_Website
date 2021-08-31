@@ -1,13 +1,17 @@
 export const mainTheme = {
   colors: {
-    lightBeige: "#f1efe9",
     dark: "#353530",
     light: "#f7f7f7",
-    goldBeige: "#ecdbba",
+    kasiaGold: "rgb(202 157 92)",
+    lightGold: "#dbc09a",
+    newBeige: "#f1ebdb",
+    goldBeige: "#ecd7ba",
+    lightBeige: "#f5f2ea",
     pureBeige: "rgb(233, 227, 220)",
     darkGrey: "6f7e7c",
     smokey: "#666666",
     lightGrey: "#999999",
+    snowGrey: "#d3d3d3",
     darkTransparent: "rgba(0, 0, 0, 0.3)",
     softGrey: "#dcdcdc",
     darkBrown: "#403d39",
@@ -31,7 +35,7 @@ export const mainTheme = {
     m: "20px",
     l: "24px",
     xl: "30px",
-    xxl: "50px",
+    xxl: "40px",
   },
 
   fontWeight: {
