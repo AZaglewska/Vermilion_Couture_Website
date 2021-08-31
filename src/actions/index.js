@@ -45,11 +45,6 @@ export const getDesignerDataAction = (data) => ({
   payload: data,
 });
 
-export const getPublicationsDataAction = (data) => ({
-  type: actionsTypes.GET_PUBLICATIONS_DATA,
-  payload: data,
-});
-
 export const getFabricsDataAction = (data) => ({
   type: actionsTypes.GET_FABRICS_DATA,
   payload: data,
@@ -62,5 +57,10 @@ export const getQuestionsAndAnswersDataAction = (data) => ({
 
 export const getMeasuringDataAction = (data) => ({
   type: actionsTypes.GET_MEASURING_DATA,
+  payload: data,
+});
+
+export const getAboutCollectionDataAction = (data) => ({
+  type: actionsTypes.GET_ABOUT_COLLECTION_DATA,
   payload: data,
 });
