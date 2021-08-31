@@ -2,7 +2,6 @@ export const routes = {
   home: "/",
   about: "/o-vermilion",
   aboutENG: "/about-vermilion",
-  publicationsENG: "/publications",
   weddingCollection: "/kolekcja-ślubna",
   weddingCollectionENG: "/wedding-collection",
   eveningCollection: "/kolekcja-wieczorowa",
