@@ -10,14 +10,14 @@ export const NavIconContent = styled.div`
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid lightgray;
-  padding: 10px 40px;
+  padding: 10px 20px;
   width: 100%;
 `;
 
 export const NavIconWrapper = styled.div`
-  @media (max-width: 540px) {
-    display: ${({ list }) => (list ? "none" : "")};
-    width: ${(props) => (props.flag ? "5%" : "95%")};
+  @media (max-width: 768px) {
+    display: ${({ list }) => (list === "true" ? "none" : "")};
+    width: ${(props) => (props.flag ? "10%" : "60%")};
   }
 
   :hover {
@@ -65,6 +65,14 @@ export const NavDropbtn = styled.button`
     position: absolute;
     top: 78%;
   }
+`;
+
+export const NavDropbtnLinkText = styled.p`
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.dark};
+  font-size: ${({ theme }) => theme.fontSizes.s};
+  display: inline-block;
+  position: relative;
 `;
 
 export const NavDropbtnLink = styled(Link)`

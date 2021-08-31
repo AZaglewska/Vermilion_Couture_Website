@@ -17,6 +17,7 @@ import {
   NavDropbtnLink,
   NavDropdownContent,
   NavDropdownContentLink,
+  NavDropbtnLinkText,
 } from "./navigationStyles/NavbarStyles.js";
 import { connect } from "react-redux";
 import { setCurrentLanguage } from "../../actions";
@@ -46,18 +47,20 @@ const Navbar = ({ currentLanguage, setEngLanguage, setPlLanguage }) => {
             <LogoIcon />
           </Link>
         </NavIconWrapper>
-        <NavIconWrapper list>
+        <NavIconWrapper list="true">
           <IconList />
         </NavIconWrapper>
+        <HamburgerMenu />
       </NavIconContent>
+
       <NavDropdownContainer>
         {navLanguage.map((item) => {
           return (
             <NavDropdown>
               {item.dropDown.length !== 0 ? (
                 <NavDropbtn>
-                  <NavDropbtnLink>{item.main}</NavDropbtnLink>
-                  <IconArrowDown nav />
+                  <NavDropbtnLinkText>{item.main}</NavDropbtnLinkText>
+                  <IconArrowDown nav="true" />
                   <IconArrowUp />
                 </NavDropbtn>
               ) : (
@@ -80,7 +83,6 @@ const Navbar = ({ currentLanguage, setEngLanguage, setPlLanguage }) => {
           );
         })}
       </NavDropdownContainer>
-      <HamburgerMenu />
     </>
   );
 };
