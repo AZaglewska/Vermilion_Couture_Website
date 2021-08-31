@@ -10,10 +10,10 @@ const initialState = {
   silkCorset: [],
   otherCorset: [],
   designerData: [],
-  publicationsData: [],
   fabricsData: [],
   questionsAndAnswersData: [],
   measuringData: [],
+  aboutCollectionData: [],
 };
 
 const reducer = (state = initialState, action) => {
@@ -73,12 +73,6 @@ const reducer = (state = initialState, action) => {
         designerData: [...payload],
       };
 
-    case actionsTypes.GET_PUBLICATIONS_DATA:
-      return {
-        ...state,
-        publicationsData: [...payload],
-      };
-
     case actionsTypes.GET_QUESTIONS_AND_ANSWERS_DATA:
       return {
         ...state,
@@ -96,6 +90,11 @@ const reducer = (state = initialState, action) => {
         measuringData: [...payload],
       };
 
+    case actionsTypes.GET_ABOUT_COLLECTION_DATA:
+      return {
+        ...state,
+        aboutCollectionData: [...payload],
+      };
     default:
       return state;
   }
