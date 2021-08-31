@@ -1,10 +1,10 @@
 import React from "react";
 import Title from "../../atoms/Title";
 import Line from "../../atoms/Line";
-import Text from "../../atoms/Text";
+import BackgroundBanner from "../../atoms/BackgroundBanner";
+import backgroundImage from "../../assets/images/background/pexels-cottonbro-4614224.jpg";
 import {
   StyledMeasuringList,
-  StyledMeasuringBackground,
   StyledMeasuringElements,
   StyledMeasuringContent,
   StyledMeasuringImage,
@@ -14,7 +14,7 @@ import {
 const Measuring = ({ measuringData, currentLanguage }) => {
   return (
     <StyledMeasuringList>
-      <StyledMeasuringBackground />
+      <BackgroundBanner image={backgroundImage} />
       {measuringData.map((measuringDataElement) => {
         const { id, name, images, description } = measuringDataElement;
 

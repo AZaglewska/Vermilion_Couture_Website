@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import backgroundImage from "../../../assets/images/background/pexels-cottonbro-4614224.jpg";
 import { show } from "../../../globalStyles/Animations";
 import ReactMarkdown from "react-markdown";
 
@@ -11,15 +10,6 @@ export const StyledMeasuringList = styled.ul`
   align-items: center;
   animation: ${show} 0.1s ease forwards;
   animation-duration: 3s;
-`;
-
-export const StyledMeasuringBackground = styled.div`
-  background-image: url(${backgroundImage});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 90% 39%;
-  height: 50vh;
-  width: 100%;
 `;
 
 export const StyledMeasuringElements = styled.li`
@@ -37,15 +27,24 @@ export const StyledMeasuringContent = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: ${({ theme }) => theme.margins.l};
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
 `;
 
 export const StyledMeasuringImage = styled.img`
   width: 500px;
+  @media (max-width: 1024px) {
+    margin-bottom: ${({ theme }) => theme.margins.l};
+    width: 60%;
+  }
+
+  @media (max-width: 540px) {
+    width: 80%;
+  }
 `;
 
 export const StyledReactMarkdown = styled(ReactMarkdown)`
-  color: black;
-  font-size: 20px;
   color: ${({ theme }) => theme.colors.lightGrey};
   font-size: ${({ theme }) => theme.fontSizes.s};
   line-height: 25px;
