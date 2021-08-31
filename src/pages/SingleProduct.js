@@ -50,7 +50,7 @@ const SingleProduct = (props) => {
           >
             <img src={images[0]} />
             <img src={images[1]} />
-            <img src={images[2]} />
+            {/* <img src={images[2]} /> */}
           </SingleProductCarousel>
         </SingleProductCarouselWrapper>
         <SingleProductElements>
