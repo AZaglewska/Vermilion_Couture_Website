@@ -3,7 +3,6 @@ import NeueHansKendrick from "../assets/fonts/NeueHansKendrick-Regular.woff";
 
 const GlobalStyle = createGlobalStyle`
 
-
 @font-face {
 font-family: "Neue Hans Kendrick Regular";
 src: url(${NeueHansKendrick}) format('woff');
