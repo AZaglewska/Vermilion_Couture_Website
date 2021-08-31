@@ -10,13 +10,13 @@ import {
   getWeddingCorsetAction,
   getEveningCorsetAction,
   getDesignerDataAction,
-  getPublicationsDataAction,
   getFabricsDataAction,
   getQuestionsAndAnswersDataAction,
   getMeshCorsetAction,
   getSilkCorsetAction,
   getOtherCorsetAction,
   getMeasuringDataAction,
+  getAboutCollectionDataAction,
 } from "../actions/index";
 
 const Root = ({
@@ -28,10 +28,10 @@ const Root = ({
   getSilkCorset,
   getOtherCorset,
   getDesignerData,
-  getPublicationsData,
   getFabricsData,
   getQuestionsAndAnswersData,
   getMeasuringData,
+  getAboutCollectionData,
   currentLanguage,
 }) => {
   const getContentfulData = (type, data) => {
@@ -75,9 +75,6 @@ const Root = ({
       case dataTypesObj.designerData:
         getDesignerData([...mappedContentfulData]);
         break;
-      case dataTypesObj.publicationsData:
-        getPublicationsData([...mappedContentfulData]);
-        break;
       case dataTypesObj.questionsAndAnswersData:
         getQuestionsAndAnswersData([...mappedContentfulData]);
         break;
@@ -87,6 +84,11 @@ const Root = ({
       case dataTypesObj.measuringData:
         getMeasuringData([...mappedContentfulData]);
         break;
+
+      case dataTypesObj.aboutCollectionData:
+        getAboutCollectionData([...mappedContentfulData]);
+        break;
+
       default:
     }
   };
@@ -128,11 +130,12 @@ const mapDispatchToProps = (dispatch) => ({
   getSilkCorset: (data) => dispatch(getSilkCorsetAction(data)),
   getOtherCorset: (data) => dispatch(getOtherCorsetAction(data)),
   getDesignerData: (data) => dispatch(getDesignerDataAction(data)),
-  getPublicationsData: (data) => dispatch(getPublicationsDataAction(data)),
   getFabricsData: (data) => dispatch(getFabricsDataAction(data)),
   getQuestionsAndAnswersData: (data) =>
     dispatch(getQuestionsAndAnswersDataAction(data)),
   getMeasuringData: (data) => dispatch(getMeasuringDataAction(data)),
+  getAboutCollectionData: (data) =>
+    dispatch(getAboutCollectionDataAction(data)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Root);

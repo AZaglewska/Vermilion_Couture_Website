@@ -7,10 +7,10 @@ export const dataTypesObj = {
   silkCorset: "silkCorset",
   otherCorset: "otherCorset",
   designerData: "designerData",
-  publicationsData: "publicationsData",
   fabricsData: "fabricsData",
   questionsAndAnswersData: "questionsAndAnswers",
   measuringData: "measuringData",
+  aboutCollectionData: "aboutCollectionData",
 };
 
 export const dataTypesArray = [
@@ -22,8 +22,8 @@ export const dataTypesArray = [
   "silkCorset",
   "otherCorset",
   "designerData",
-  "publicationsData",
   "fabricsData",
   "questionsAndAnswers",
   "measuringData",
+  "aboutCollectionData",
 ];
