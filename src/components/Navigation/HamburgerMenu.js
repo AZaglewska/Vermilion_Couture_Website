@@ -5,9 +5,9 @@ import MobileNav from "./MobileNav";
 const StyledBurger = styled.div`
   width: 1.5rem;
   height: 1.5rem;
-  position: ${({ open }) => (open ? "fixed" : "absolute")};
-  top: ${({ open }) => (open ? "4%" : "4.3%")};
-  right: ${({ open }) => (open ? "4%" : "2%")};
+  position: ${({ hamburgerMenuOpen }) => (hamburgerMenuOpen ? "fixed" : "")};
+  top: ${({ hamburgerMenuOpen }) => (hamburgerMenuOpen ? "6%" : "")};
+  right: ${({ hamburgerMenuOpen }) => (hamburgerMenuOpen ? "4.5%" : "")};
   z-index: 20;
   display: none;
   cursor: pointer;
@@ -19,40 +19,55 @@ const StyledBurger = styled.div`
   }
 
   @media (max-width: 540px) {
-    right: ${({ open }) => (open ? "none" : "5%")};
+    right: ${({ hamburgerMenuOpen }) => (hamburgerMenuOpen ? "none" : "5%")};
   }
 
   div {
     width: 1.5rem;
     height: 0.25rem;
-    background-color: ${({ open }) => (open ? "#ecdbba" : "#353530")};
+    background-color: ${({ hamburgerMenuOpen }) =>
+      hamburgerMenuOpen ? "#ecdbba" : "#353530"};
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.3s linear;
     &:nth-child(1) {
-      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+      transform: ${({ hamburgerMenuOpen }) =>
+        hamburgerMenuOpen ? "rotate(45deg)" : "rotate(0)"};
     }
     &:nth-child(2) {
-      transform: ${({ open }) => (open ? "translateX(100%)" : "translateX(0)")};
-      opacity: ${({ open }) => (open ? 0 : 1)};
+      transform: ${({ hamburgerMenuOpen }) =>
+        hamburgerMenuOpen ? "translateX(100%)" : "translateX(0)"};
+      opacity: ${({ hamburgerMenuOpen }) => (hamburgerMenuOpen ? 0 : 1)};
     }
 
     &:nth-child(3) {
-      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
+      transform: ${({ hamburgerMenuOpen }) =>
+        hamburgerMenuOpen ? "rotate(-45deg)" : "rotate(0)"};
     }
   }
 `;
 
 const HamburgerMenu = () => {
-  const [open, setOpen] = useState(false);
+  const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
+
+  const toggleHamburgerMenuOpen = () => {
+    setHamburgerMenuOpen(!hamburgerMenuOpen);
+  };
+
   return (
     <>
-      <StyledBurger open={open} onClick={() => setOpen(!open)}>
+      <StyledBurger
+        hamburgerMenuOpen={hamburgerMenuOpen}
+        onClick={toggleHamburgerMenuOpen}
+      >
         <div></div>
         <div></div>
         <div></div>
       </StyledBurger>
-      <MobileNav open={open} />
+      <MobileNav
+        hamburgerMenuOpen={hamburgerMenuOpen}
+        toggleHamburgerMenuOpen={toggleHamburgerMenuOpen}
+      />
     </>
   );
 };
