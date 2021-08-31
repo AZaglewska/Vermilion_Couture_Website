@@ -11,16 +11,19 @@ export const StyledLogo = styled.svg`
   width: 40px;
   fill: ${({ theme }) => theme.colors.dark};
   transition: fill 0.5s;
+  :hover {
+    fill: ${({ theme }) => theme.colors.lightGold};
+  }
 `;
 
 export const StyledLogoTitle = styled.svg`
-  margin-top: 5px;
-  width: 80px;
+  margin-top: ${({ theme }) => theme.margins.xs};
+  width: 90px;
   fill: ${({ theme }) => theme.colors.dark};
 `;
 
 export const StyledLogoSubtitle = styled.svg`
-  margin-top: 5px;
-  width: 47px;
+  margin-top: ${({ theme }) => theme.margins.xs};
+  width: 60px;
   fill: ${({ theme }) => theme.colors.dark};
 `;
