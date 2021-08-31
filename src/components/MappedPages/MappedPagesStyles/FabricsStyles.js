@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import backgroundImage from "../../../assets/images/background/pexels-cottonbro-4614231.jpg";
 import { show } from "../../../globalStyles/Animations";
 
 export const StyledFabricsWrapper = styled.div`
@@ -9,15 +8,6 @@ export const StyledFabricsWrapper = styled.div`
   flex-direction: column;
   animation: ${show} 0.1s ease forwards;
   animation-duration: 3s;
-`;
-
-export const StyledFabricsBackground = styled.div`
-  background-image: url(${backgroundImage});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 90% 39%;
-  height: 50vh;
-  width: 100%;
 `;
 
 export const StyledFabricsContent = styled.div`
@@ -30,9 +20,15 @@ export const StyledFabricsContent = styled.div`
 
 export const StyledFabricsListGrid = styled.ul`
   display: grid;
-  grid-gap: 10px;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 430px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 export const StyledFabricsElement = styled.li`
@@ -53,4 +49,9 @@ export const StyledFabricsName = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.l};
   color: ${({ theme }) => theme.colors.smokey};
   margin-top: ${({ theme }) => theme.margins.l};
+
+  @media (max-width: 430px) {
+    font-size: ${({ theme }) => theme.fontSizes.m};
+    margin-top: ${({ theme }) => theme.margins.m};
+  }
 `;
