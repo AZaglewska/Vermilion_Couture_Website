@@ -1,6 +1,4 @@
 import React from "react";
-import AwesomeSlider from "react-awesome-slider";
-import withAutoplay from "react-awesome-slider/dist/autoplay";
 import imageOne from "../../assets/images/slider/IMG_8911-Edit.jpg";
 import imageTwo from "../../assets/images/slider/IMG_1948-Edit.jpg";
 import imageThree from "../../assets/images/slider/IMG_8981-Edit.jpg";
@@ -12,7 +10,12 @@ import { StyledSlider } from "./SliderStyles";
 const Slider = () => {
   return (
     <>
-      <StyledSlider play={true} cancelOnInteraction={false} interval={6000}>
+      <StyledSlider
+        play={true}
+        cancelOnInteraction={false}
+        interval={6000}
+        mobileTouch={true}
+      >
         <div data-src={imageOne} />
         <div data-src={imageTwo} />
         <div data-src={imageThree} />
