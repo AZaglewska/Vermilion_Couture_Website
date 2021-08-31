@@ -16,7 +16,6 @@ const PrivacyPolicyENG = () => {
   return (
     <PrivacyPolicyContent>
       <BackgroundBanner image={backgroundImage} />
-
       <PrivacyPolicyElements>
         <Title>Privacy Policy </Title>
         <Line />
