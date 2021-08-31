@@ -2,13 +2,15 @@ export const navbarLanguages = {
   ENG: [
     {
       main: "About Vermilion",
+      isOpen: false,
       dropDown: [
         { name: "About", route: "/about-vermilion" },
-        { name: "Publications", route: "/publications" },
+        { name: "Collection", route: "/about-collection" },
       ],
     },
     {
-      main: " Ready collections",
+      main: "Ready collections",
+      isOpen: false,
       dropDown: [
         { name: "Wedding", route: "/wedding-collection" },
         { name: "Evening", route: "/evening-collection" },
@@ -16,6 +18,7 @@ export const navbarLanguages = {
     },
     {
       main: "Basic",
+      isOpen: false,
       dropDown: [
         { name: "Underbust", route: "/underbust-collection" },
         { name: "Overbust", route: "/overbust-collection" },
@@ -23,13 +26,13 @@ export const navbarLanguages = {
     },
     {
       main: "Couture",
+      isOpen: false,
       dropDown: [
         { name: "Mesh", route: "/mesh-collection" },
         { name: "Silk", route: "/silk-collection" },
         { name: "Other", route: "/other-collection" },
       ],
     },
-
     {
       main: "Contact",
       route: "/contact",
@@ -40,13 +43,15 @@ export const navbarLanguages = {
   PL: [
     {
       main: "O Vermilion",
+      isOpen: false,
       dropDown: [
         { name: "O nas", route: "/o-vermilion" },
-        { name: "Publikacje", route: "/publikacje" },
+        { name: "Kolekcja", route: "/o-kolekcji" },
       ],
     },
     {
       main: "Gotowe kreacje",
+      isOpen: false,
       dropDown: [
         { name: "Ślubne", route: "/kolekcja-ślubna" },
         { name: "Wieczorowe", route: "/kolekcja-wieczorowa" },
@@ -55,21 +60,22 @@ export const navbarLanguages = {
 
     {
       main: "Kolekcja podstawowa",
+      isOpen: false,
       dropDown: [
         { name: "Underbust", route: "/kolekcja-underbust" },
         { name: "Overbust", route: "/kolekcja-overbust" },
       ],
     },
-
     {
       main: "Couture",
+      isOpen: false,
+
       dropDown: [
         { name: "Transparentne", route: "/kolekcja-transparentna" },
         { name: "Jedwabne", route: "/kolekcja-jedwabna" },
         { name: "Inne", route: "/kolekcja-inne" },
       ],
     },
-
     {
       main: "Kontakt",
       route: "/kontakt",
@@ -82,7 +88,7 @@ export const footerLanguages = {
   ENG: {
     contact: {
       title: "Contact",
-      content: ["vermilionteam@gmail.com"],
+      content: ["contact@vermilioncouture.com", "phone: 735 412 280"],
     },
     links: {
       title: "Information",
@@ -101,8 +107,9 @@ export const footerLanguages = {
   PL: {
     contact: {
       title: "Kontakt",
-      content: ["vermilionteam@gmail.com"],
+      content: ["contact@vermilioncouture.com", "telefon: 735 412 280"],
     },
+
     links: {
       title: "Informacje",
       linksArray: [
