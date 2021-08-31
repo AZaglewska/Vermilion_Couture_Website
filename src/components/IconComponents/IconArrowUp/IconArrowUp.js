@@ -3,15 +3,14 @@ import styled from "styled-components";
 import { IoIosArrowUp } from "react-icons/io";
 
 export const StyledIconArrowUp = styled(IoIosArrowUp)`
-  width: 15px;
-  margin-left: 3px;
+  margin-left: 4px;
   display: ${(props) => (props.dropdownOpen ? "inline-block" : "none")};
 `;
 
 const IconArrowUp = (props) => {
-  const { dropdownOpen } = props;
+  const { dropdownOpen, size } = props;
 
-  return <StyledIconArrowUp dropdownOpen={dropdownOpen} />;
+  return <StyledIconArrowUp dropdownOpen={dropdownOpen} size={size} />;
 };
 
 export default IconArrowUp;
