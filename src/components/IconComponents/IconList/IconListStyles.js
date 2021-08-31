@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const IconLink = styled.a`
-  margin-bottom: ${(props) => (props.footer ? "8px" : "0px")};
+  margin-bottom: ${({ footer }) => (footer ? "8px" : "0px")};
 `;
 
 export const Icon = styled.svg`
