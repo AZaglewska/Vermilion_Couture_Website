@@ -2,7 +2,6 @@ export const routes = {
   home: "/",
   about: "/o-vermilion",
   aboutENG: "/about-vermilion",
-  publications: "/publikacje",
   publicationsENG: "/publications",
   weddingCollection: "/kolekcja-ślubna",
   weddingCollectionENG: "/wedding-collection",
@@ -28,6 +27,8 @@ export const routes = {
   fabricsENG: "/fabrics",
   measuring: "/jak-pobrać-wymiary",
   measuringENG: "/how-to-take-measurements",
+  aboutCollection: "/o-kolekcji",
+  aboutCollectionENG: "/about-collection",
   privacyPolicyPL: "/polityka-prywatności",
   privacyPolicyENG: "/privacy-policy",
 };

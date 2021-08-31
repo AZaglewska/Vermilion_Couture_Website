@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import MainTemplate from "../templates/MainTemplate";
 import Home from "../pages/Home";
 import AboutPage from "../pages/AboutPage";
-import PublicationsPage from "../pages/PublicationsPage";
 import EveningCollection from "../pages/EveningCollection";
 import WeddingCollection from "../pages/WeddingCollection";
 import UnderbustCollection from "../pages/UnderbustCollection";
@@ -16,6 +15,7 @@ import SingleProduct from "../pages/SingleProduct";
 import AskedQuestionsPage from "../pages/AskedQuestionsPage";
 import FabricsPage from "../pages/FabricsPage";
 import MeasuringPage from "../pages/MeasuringPage";
+import AboutCollectionPage from "../pages/AboutCollectionPage";
 import PrivacyPolicyPL from "../components/MappedPages/PrivacyPolicyPL";
 import PrivacyPolicyENG from "../components/MappedPages/PrivacyPolicyENG";
 import { connect } from "react-redux";
@@ -39,11 +39,6 @@ const Router = ({ currentLanguage }) => {
               <Route exact path={routes.home} component={Home} />
               <Route path={routes.about} component={AboutPage} />
               <Route path={routes.aboutENG} component={AboutPage} />
-              <Route path={routes.publications} component={PublicationsPage} />
-              <Route
-                path={routes.publicationsENG}
-                component={PublicationsPage}
-              />
               <Route
                 path={routes.eveningCollection}
                 component={EveningCollection}
@@ -110,6 +105,14 @@ const Router = ({ currentLanguage }) => {
               <Route path={routes.fabricsENG} component={FabricsPage} />
               <Route path={routes.measuring} component={MeasuringPage} />
               <Route path={routes.measuringENG} component={MeasuringPage} />
+              <Route
+                path={routes.aboutCollection}
+                component={AboutCollectionPage}
+              />
+              <Route
+                path={routes.aboutCollectionENG}
+                component={AboutCollectionPage}
+              />
               <Route
                 path={routes.privacyPolicyPL}
                 component={PrivacyPolicyPL}
