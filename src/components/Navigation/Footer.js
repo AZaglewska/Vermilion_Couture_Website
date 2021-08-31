@@ -41,7 +41,7 @@ const Footer = ({ currentLanguage }) => {
           ))}
         </StyledFooterElements>
         <StyledFooterElements>
-          <h3 socialMedia>Social media</h3>
+          <h3>Social media</h3>
           <StyledFooterIconContainer>
             <IconList footer />
           </StyledFooterIconContainer>
