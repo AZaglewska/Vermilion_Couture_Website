@@ -3,7 +3,7 @@ import Title from "../../atoms/Title";
 import Text from "../../atoms/Text";
 import Line from "../../atoms/Line";
 import BackgroundBanner from "../../atoms/BackgroundBanner";
-import backgroundImage from "../../assets/images/background/IMG_8950-Edit.jpg";
+import backgroundImage from "../../assets/images/background/IMG_2464-Edit.jpg";
 import {
   PrivacyPolicyContent,
   PrivacyPolicyElements,
