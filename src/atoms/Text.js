@@ -5,7 +5,15 @@ const StyledText = styled.p`
   color: ${({ theme }) => theme.colors.lightGrey};
   font-size: ${({ theme }) => theme.fontSizes.s};
   line-height: 25px;
-  margin-top: ${(props) => (props.marginTop ? "15px" : "none")};
+
+  ${({ styleType }) =>
+    styleType === "about" &&
+    css`
+      margin-top: ${({ marginTop }) => (marginTop ? "15px" : "none")};
+      @media (max-width: 320px) {
+        font-size: ${({ theme }) => theme.fontSizes.xs};
+      }
+    `}
 
   ${({ styleType }) =>
     styleType === "biggerText" &&
