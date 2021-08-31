@@ -11,9 +11,11 @@ const StyledTitle = styled.h1`
   animation-duration: 3s;
   animation-fill-mode: forwards;
   font-weight: ${({ theme }) => theme.fontWeight.light};
-
   @media (max-width: 430px) {
     font-size: ${({ theme }) => theme.fontSizes.xl};
+  }
+  @media (max-width: 280px) {
+    font-size: ${({ theme }) => theme.fontSizes.l};
   }
 
   ${({ styleType }) =>
@@ -40,6 +42,18 @@ const StyledTitle = styled.h1`
     css`
       font-size: ${({ theme }) => theme.fontSizes.xl};
       color: ${({ theme }) => theme.colors.smokey};
+      @media (max-width: 430px) {
+        font-size: ${({ theme }) => theme.fontSizes.l};
+      }
+    `}
+
+    ${({ styleType }) =>
+    styleType === "question" &&
+    css`
+      @media (max-width: 540px) {
+        font-size: ${({ theme }) => theme.fontSizes.xl};
+      }
+
       @media (max-width: 430px) {
         font-size: ${({ theme }) => theme.fontSizes.l};
       }
