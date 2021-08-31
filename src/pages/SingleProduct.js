@@ -48,9 +48,8 @@ const SingleProduct = (props) => {
             onChange={(value) => setPhotoIndex(value)}
             selectedItem={photoIndex}
           >
-            <img src={images[0]} />
-            <img src={images[1]} />
-            {/* <img src={images[2]} /> */}
+            <img src={images[0]} alt={name} />
+            <img src={images[1]} alt={name} />
           </SingleProductCarousel>
         </SingleProductCarouselWrapper>
         <SingleProductElements>
