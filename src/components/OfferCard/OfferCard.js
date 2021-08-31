@@ -2,7 +2,6 @@ import React from "react";
 import Title from "../../atoms/Title";
 import {
   OfferCardWrapper,
-  OfferCardTitle,
   OfferCardElementsWrapper,
   OfferCardElements,
   OfferCardIcon,
