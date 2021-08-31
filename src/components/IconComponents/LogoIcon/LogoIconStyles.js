@@ -24,6 +24,6 @@ export const StyledLogoTitle = styled.svg`
 
 export const StyledLogoSubtitle = styled.svg`
   margin-top: ${({ theme }) => theme.margins.xs};
-  width: 60px;
+  width: 70px;
   fill: ${({ theme }) => theme.colors.dark};
 `;
