@@ -48,8 +48,6 @@ const Root = ({
       return product;
     });
 
-    console.log(mappedContentfulData);
-
     switch (type) {
       case dataTypesObj.underbustCorset:
         getUnderbustCorset([...mappedContentfulData]);
@@ -100,7 +98,6 @@ const Root = ({
         })
         .then((response) => {
           getContentfulData(type, response.items);
-          console.log(response.items);
         });
     });
   };
