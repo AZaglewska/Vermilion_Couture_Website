@@ -2,19 +2,20 @@ import React from "react";
 import Title from "../../atoms/Title";
 import Text from "../../atoms/Text";
 import Line from "../../atoms/Line";
+import BackgroundBanner from "../../atoms/BackgroundBanner";
+import backgroundImage from "../../assets/images/background/IMG_2464-Edit.jpg";
 import {
   PrivacyPolicyContent,
-  PrivacyPolicyBackground,
   PrivacyPolicyElements,
   PrivacyPolicyList,
   PrivacyPolicyListMain,
   PrivacyPolicyNested,
-} from "./MappedPagesStyles/PrivacyPolicyPLStyles";
+} from "./MappedPagesStyles/PrivacyPolicyStyles";
 
 const PrivacyPolicyENG = () => {
   return (
     <PrivacyPolicyContent>
-      <PrivacyPolicyBackground />
+      <BackgroundBanner image={backgroundImage} />
 
       <PrivacyPolicyElements>
         <Title>Privacy Policy </Title>
