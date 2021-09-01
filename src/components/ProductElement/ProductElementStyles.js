@@ -1,12 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-export const CarouselElement = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-`;
+export const CarouselElement = styled.div``;
 
 export const CarouselIcon = styled.svg`
   position: relative;
@@ -16,6 +11,7 @@ export const CarouselIcon = styled.svg`
   transition-duration: 0.3s;
   transition-delay: 0s;
   width: 20px;
+  fill: ${({ theme }) => theme.colors.light};
 `;
 
 export const CarouselProductName = styled.p`
@@ -32,6 +28,7 @@ export const CarouselLink = styled(Link)`
   display: inline-block;
   margin: ${({ theme }) => theme.margins.s};
   opacity: 0.99;
+  height: 100%;
   overflow: hidden;
   position: relative;
 
@@ -49,15 +46,16 @@ export const CarouselLink = styled(Link)`
 `;
 
 export const CarouselImage = styled.img`
-  height: inherit;
+  height: 100%;
+  width: 100%;
+  transform: scale(1.1);
   transition: transform 3s ease;
   backface-visibility: hidden;
-  width: 350;
 `;
 
 export const CarouselTransparentColor = styled.div`
-  height: inherit;
-  width: inherit;
+  height: 100%;
+  width: 100%;
   background-color: rgba(0, 0, 0, 0);
   position: absolute;
   top: 0;
@@ -67,13 +65,12 @@ export const CarouselTransparentColor = styled.div`
 
 export const CarouselImgWrapper = styled.div`
   overflow: hidden;
-  height: 70vh;
   width: 100%;
   position: relative;
 
   :hover {
     ${CarouselImage} {
-      transform: scale(1.1);
+      transform: scale(1.2);
     }
 
     ${CarouselTransparentColor} {
