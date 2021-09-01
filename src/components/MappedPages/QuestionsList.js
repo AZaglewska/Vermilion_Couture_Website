@@ -32,7 +32,7 @@ const QuestionsList = ({ questionsAndAnswersData }) => {
 
         return (
           <StyledQuestionsElement key={id}>
-            <Title styleType="question">{name}</Title>
+            <Title>{name}</Title>
             <StyledQuestionsContent>
               <Line />
               <StyledQuestion first>{questions[0]}</StyledQuestion>
