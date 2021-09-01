@@ -11,9 +11,13 @@ export const ArrowUpIcon = styled.svg`
   bottom: 10%;
   right: 1%;
   cursor: pointer;
-  fill: ${({ theme }) => theme.colors.smokey};
+  fill: rgba(102, 102, 102, 0.7);
+  opacity: 0.3;
   transition: 1s all ease;
   :hover {
-    fill: rgba(102, 102, 102, 0.8);
+    fill: rgba(102, 102, 102, 0.9);
+  }
+  @media (max-width: 430px) {
+    width: 35px;
   }
 `;
