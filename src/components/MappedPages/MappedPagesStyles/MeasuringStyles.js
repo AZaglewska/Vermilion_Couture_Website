@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { show } from "../../../globalStyles/Animations";
 import ReactMarkdown from "react-markdown";
+import { show } from "../../../globalStyles/Animations";
 
 export const StyledMeasuringList = styled.ul`
   width: 100%;
@@ -48,4 +48,7 @@ export const StyledReactMarkdown = styled(ReactMarkdown)`
   color: ${({ theme }) => theme.colors.lightGrey};
   font-size: ${({ theme }) => theme.fontSizes.s};
   line-height: 25px;
+  @media (max-width: 320px) {
+    font-size: ${({ theme }) => theme.fontSizes.xs};
+  }
 `;
