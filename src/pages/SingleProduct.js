@@ -13,6 +13,7 @@ import {
   SingleProductIcon,
   SingleProductCarousel,
   SingleProductElements,
+  SingleProductTitleWrapper,
   SingleProductPrice,
   SingleProductText,
   SingleProductIconWrapper,
@@ -48,7 +49,9 @@ const SingleProduct = (props) => {
           </SingleProductCarousel>
         </SingleProductCarouselWrapper>
         <SingleProductElements>
-          <Title>{name}</Title>
+          <SingleProductTitleWrapper>
+            <Title>{name}</Title>
+          </SingleProductTitleWrapper>
           <Line />
           <SingleProductPrice>
             {currentLanguage === "PL" ? "Cena od" : "Prices from"}

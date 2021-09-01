@@ -7,7 +7,7 @@ export const SingleProductContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  padding: 50px 0;
+  padding: 40px 0;
   animation: ${show} 0.1s ease forwards;
   animation-duration: 3s;
 
@@ -58,19 +58,27 @@ export const SingleProductElements = styled.div`
     width: 90%;
   }
 `;
+export const SingleProductTitleWrapper = styled.div`
+  @media (max-width: 940px) {
+    text-align: center;
+    margin-top: ${({ theme }) => theme.margins.s};
+  }
+`;
 
 export const SingleProductPrice = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.m};
   color: ${({ theme }) => theme.colors.smokey};
-  margin: ${({ theme }) => theme.margins.l} 0;
+  margin: ${({ theme }) => theme.margins.m} 0;
   span {
     margin-left: ${({ theme }) => theme.margins.xs};
+  }
+  @media (max-width: 320px) {
+    font-size: ${({ theme }) => theme.fontSizes.s};
   }
 `;
 
 export const SingleProductText = styled.div`
-  margin: ${({ theme }) => theme.margins.m} 0 ${({ theme }) => theme.margins.xl}
-    0;
+  margin: 0 0 ${({ theme }) => theme.margins.l} 0;
 `;
 
 export const SingleProductIconWrapper = styled.div`
