@@ -9,7 +9,7 @@ export const NavIconContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.snowGrey};
   padding: 10px 20px;
   width: 100%;
 `;
@@ -17,9 +17,8 @@ export const NavIconContent = styled.div`
 export const NavIconWrapper = styled.div`
   @media (max-width: 768px) {
     display: ${({ list }) => (list === "true" ? "none" : "")};
-    width: ${(props) => (props.flag ? "10%" : "60%")};
+    width: ${({ flag }) => (flag ? "10%" : "60%")};
   }
-
   :hover {
     ${StyledLogo} {
       fill: ${({ theme }) => theme.colors.goldBeige};
@@ -31,7 +30,6 @@ export const NavDropdownContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-size: 14px;
   height: 12vh;
 
   @media (max-width: 768px) {
@@ -41,17 +39,12 @@ export const NavDropdownContainer = styled.div`
 
 export const NavDropbtn = styled.button`
   color: ${({ theme }) => theme.colors.dark};
-  font-size: ${({ theme }) => theme.fontSizes.s};
   background-color: transparent;
   padding: 16px 0;
-  font-size: 16px;
   border: none;
 
-  :hover {
-    color: ${({ theme }) => theme.colors.goldBeige};
-  }
-
-  :focus {
+  &:hover,
+  &:focus {
     color: ${({ theme }) => theme.colors.goldBeige};
   }
 
@@ -87,7 +80,7 @@ export const NavDropdownContent = styled.div`
   display: none;
   position: absolute;
   background-color: white;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
   z-index: 10;
 `;
 
@@ -101,11 +94,9 @@ export const NavDropdownContentLink = styled(Link)`
   width: 150px;
   transition: ease 1s;
 
-  :hover {
-    color: ${({ theme }) => theme.colors.goldBeige};
-  }
-  :focus {
-    color: ${({ theme }) => theme.colors.goldBeige};
+  &:hover,
+  &:focus {
+    color: ${({ theme }) => theme.colors.softGrey};
   }
 `;
 
@@ -115,10 +106,15 @@ export const NavDropdown = styled.div`
   @media (max-width: 768px) {
     display: none;
   }
-  :hover {
+  &:hover,
+  &:focus {
     ${NavDropdownContent} {
       display: block;
       animation: ${show} 0.7s ease forwards;
+    }
+
+    ${NavDropbtnLinkText} {
+      color: ${({ theme }) => theme.colors.goldBeige};
     }
     ${NavDropbtnLink} {
       color: ${({ theme }) => theme.colors.goldBeige};
