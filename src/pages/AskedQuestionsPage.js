@@ -4,9 +4,9 @@ import { connect } from "react-redux";
 
 const AskedQuestionsPage = ({ questionsAndAnswersData }) => {
   return (
-    <div>
+    <>
       <QuestionsList questionsAndAnswersData={questionsAndAnswersData} />
-    </div>
+    </>
   );
 };
 

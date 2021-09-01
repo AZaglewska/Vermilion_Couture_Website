@@ -4,9 +4,9 @@ import { connect } from "react-redux";
 
 const AboutPage = ({ designerData }) => {
   return (
-    <div>
+    <>
       <About designerData={designerData} />
-    </div>
+    </>
   );
 };
 

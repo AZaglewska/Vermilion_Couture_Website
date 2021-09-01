@@ -4,9 +4,9 @@ import { connect } from "react-redux";
 
 const FabricsPage = ({ fabricsData, currentLanguage }) => {
   return (
-    <div>
+    <>
       <Fabrics fabricsData={fabricsData} currentLanguage={currentLanguage} />
-    </div>
+    </>
   );
 };
 
