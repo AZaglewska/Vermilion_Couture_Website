@@ -15,7 +15,7 @@ export const StyledFabricsContent = styled.div`
   flex-direction: column;
   align-items: center;
   width: 90%;
-  padding: 40px 0;
+  margin: ${({ theme }) => theme.margins.xl} 0;
 `;
 
 export const StyledFabricsListGrid = styled.ul`
@@ -45,7 +45,7 @@ export const StyledFabricsName = styled.p`
   color: ${({ theme }) => theme.colors.smokey};
   margin-top: ${({ theme }) => theme.margins.l};
 
-  @media (max-width: 430px) {
+  @media (max-width: 540px) {
     font-size: ${({ theme }) => theme.fontSizes.m};
     margin-top: ${({ theme }) => theme.margins.m};
   }
