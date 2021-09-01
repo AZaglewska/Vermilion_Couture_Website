@@ -16,5 +16,5 @@ export const CollectionWrapper = styled.div`
 export const CollectionElements = styled.div`
   width: 90%;
   text-align: center;
-  margin: ${({ theme }) => theme.margins.l} 0;
+  margin: ${({ theme }) => theme.margins.xl} 0;
 `;
