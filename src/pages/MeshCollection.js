@@ -1,13 +1,13 @@
 import React from "react";
 import Title from "../atoms/Title";
 import Line from "../atoms/Line";
+import ProductList from "../components/ProductList.js/ProductList";
+import { connect } from "react-redux";
 import {
   CollectionContent,
   CollectionWrapper,
   CollectionElements,
 } from "./pagesStyles/CollectionStyles";
-import ProductList from "../components/ProductList.js/ProductList";
-import { connect } from "react-redux";
 
 const MeshCollection = ({ mesh, currentLanguage }) => {
   return (
