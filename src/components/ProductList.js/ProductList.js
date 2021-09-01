@@ -1,28 +1,34 @@
 import React from "react";
 import ProductElement from "../ProductElement/ProductElement";
 import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-import CustomDot from "../CarouselElements/CarouselCustomDot";
+import CustomDot from "./CarouselElements/CarouselCustomDot";
 import {
   CustomLeftArrow,
   CustomRightArrow,
-} from "../CarouselElements/CarouselCustomArrow";
+} from "./CarouselElements/CarouselCustomArrow";
+import { ProductCarouselList } from "./ProductListStyles";
+import "react-multi-carousel/lib/styles.css";
 
 const responsive = {
+  superLargeDesktop: {
+    breakpoint: { max: 4000, min: 3000 },
+    items: 5,
+  },
+  mediumDesktop: {
+    breakpoint: { max: 3000, min: 1200 },
+    items: 4,
+  },
   desktop: {
-    breakpoint: { max: 3000, min: 1024 },
+    breakpoint: { max: 1200, min: 800 },
     items: 3,
-    paritialVisibilityGutter: 600,
   },
   tablet: {
-    breakpoint: { max: 1024, min: 464 },
+    breakpoint: { max: 800, min: 464 },
     items: 2,
-    paritialVisibilityGutter: 300,
   },
   mobile: {
-    breakpoint: { max: 650, min: 0 },
+    breakpoint: { max: 464, min: 0 },
     items: 1,
-    paritialVisibilityGutter: 40,
   },
 };
 
@@ -36,13 +42,17 @@ const ProductList = ({ corsetData, deviceType }) => {
       arrows
       infinite={true}
       autoPlay={deviceType !== "mobile" ? true : false}
-      autoPlaySpeed={4000}
+      autoPlaySpeed={5000}
       customDot={<CustomDot />}
       customLeftArrow={<CustomLeftArrow />}
       customRightArrow={<CustomRightArrow />}
     >
-      {corsetData.map((corsetDataElement) => {
-        return <ProductElement corsetDataElement={corsetDataElement} />;
+      {corsetData.map((corsetDataElement, index) => {
+        return (
+          <ProductCarouselList key={index}>
+            <ProductElement corsetDataElement={corsetDataElement} />
+          </ProductCarouselList>
+        );
       })}
     </Carousel>
   );
