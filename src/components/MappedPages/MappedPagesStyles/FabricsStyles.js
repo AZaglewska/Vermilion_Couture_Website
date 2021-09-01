@@ -15,7 +15,7 @@ export const StyledFabricsContent = styled.div`
   flex-direction: column;
   align-items: center;
   width: 90%;
-  margin: ${({ theme }) => theme.margins.xl} 0;
+  padding: 40px 0;
 `;
 
 export const StyledFabricsListGrid = styled.ul`
@@ -40,11 +40,6 @@ export const StyledFabricsElement = styled.li`
   list-style: none;
 `;
 
-export const StyledFabricsImage = styled.img`
-  width: 100%;
-  margin: ${({ theme }) => theme.margins.s} 0;
-`;
-
 export const StyledFabricsName = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.l};
   color: ${({ theme }) => theme.colors.smokey};
@@ -54,4 +49,13 @@ export const StyledFabricsName = styled.p`
     font-size: ${({ theme }) => theme.fontSizes.m};
     margin-top: ${({ theme }) => theme.margins.m};
   }
+`;
+
+export const StyledFabricsLineWrapper = styled.div`
+  width: 70%;
+`;
+
+export const StyledFabricsImage = styled.img`
+  width: 100%;
+  margin: ${({ theme }) => theme.margins.s} 0;
 `;

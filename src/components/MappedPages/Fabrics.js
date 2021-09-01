@@ -10,6 +10,7 @@ import {
   StyledFabricsListGrid,
   StyledFabricsElement,
   StyledFabricsImage,
+  StyledFabricsLineWrapper,
   StyledFabricsName,
 } from "./MappedPagesStyles/FabricsStyles";
 
@@ -31,7 +32,9 @@ const Fabrics = ({ fabricsData, currentLanguage }) => {
             return (
               <StyledFabricsElement key={id}>
                 <StyledFabricsName>{name}</StyledFabricsName>
-                <Line styleType="greyLine" />
+                <StyledFabricsLineWrapper>
+                  <Line styleType="greyLine" />
+                </StyledFabricsLineWrapper>
                 <StyledFabricsImage src={images} />
                 <Text>{description}</Text>
               </StyledFabricsElement>
