@@ -49,10 +49,6 @@ export const PrivacyPolicyNested = styled.ol`
   @media (max-width: 320px) {
     font-size: ${({ theme }) => theme.fontSizes.xs};
   }
-  span {
-    display: block;
-    font-size: ${({ theme }) => theme.fontSizes.xs};
-  }
 
   a {
     color: ${({ theme }) => theme.colors.lightGrey};
