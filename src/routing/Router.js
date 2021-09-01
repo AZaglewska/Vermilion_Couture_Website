@@ -9,7 +9,6 @@ import OverbustCollection from "../pages/OverbustCollection";
 import MeshCollection from "../pages/MeshCollection";
 import SilkCollection from "../pages/SilkCollection";
 import OtherCollection from "../pages/OtherCollection";
-import Couture from "../pages/Couture";
 import Contact from "../pages/Contact";
 import SingleProduct from "../pages/SingleProduct";
 import AskedQuestionsPage from "../pages/AskedQuestionsPage";
@@ -84,7 +83,6 @@ const Router = () => {
                 path={routes.otherCollectionENG}
                 component={OtherCollection}
               />
-              <Route path={routes.couture} component={Couture} />
               <Route path={routes.contact} component={Contact} />
               <Route path={routes.contactENG} component={Contact} />
               <Route path={routes.singleProduct} component={SingleProduct} />

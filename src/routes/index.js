@@ -16,7 +16,6 @@ export const routes = {
   silkCollectionENG: "/silk-collection",
   otherCollection: "/other-collection",
   otherCollectionENG: "/kolekcja-inne",
-  couture: "/couture",
   contact: "/kontakt",
   contactENG: "/contact",
   singleProduct: "/product/:productName",
