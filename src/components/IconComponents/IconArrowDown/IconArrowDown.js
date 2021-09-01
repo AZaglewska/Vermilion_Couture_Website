@@ -6,13 +6,19 @@ export const StyledIconArrowDown = styled(IoIosArrowDown)`
   display: ${({ dropdownopen }) =>
     dropdownopen === "true" ? "none" : "inline-block"};
   margin: ${({ nav }) => (nav === "true" ? "-2px 3px" : "0px 4px")};
+  cursor: pointer;
 `;
 
 const IconArrowDown = (props) => {
-  const { dropdownOpen, nav, size } = props;
+  const { dropdownOpen, nav, size, onClick } = props;
 
   return (
-    <StyledIconArrowDown dropdownopen={dropdownOpen} nav={nav} size={size} />
+    <StyledIconArrowDown
+      dropdownopen={dropdownOpen}
+      nav={nav}
+      size={size}
+      onClick={onClick}
+    />
   );
 };
 
