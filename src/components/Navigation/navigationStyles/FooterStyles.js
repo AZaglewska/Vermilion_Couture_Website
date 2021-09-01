@@ -20,7 +20,26 @@ export const StyledFooterElementsWrapper = styled.div`
   }
 `;
 
-export const StyledContactLink = styled(Link)`
+export const StyledFooterElements = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: ${({ theme }) => theme.margins.m} 0;
+  color: ${({ theme }) => theme.colors.dark};
+
+  @media (max-width: 540px) {
+    align-items: center;
+  }
+
+  h3 {
+    margin-bottom: ${({ theme }) => theme.margins.m};
+  }
+
+  p {
+    margin-bottom: ${({ theme }) => theme.margins.s};
+  }
+`;
+
+export const StyledFooterContactLink = styled(Link)`
   color: ${({ theme }) => theme.colors.dark};
   text-decoration: none;
   transition: ease 1s;
@@ -38,31 +57,12 @@ export const StyledFooterContactWrapper = styled.div`
   }
 
   :hover {
-    ${StyledContactLink} {
+    ${StyledFooterContactLink} {
       color: ${({ theme }) => theme.colors.goldBeige};
     }
     svg {
       fill: ${({ theme }) => theme.colors.goldBeige};
     }
-  }
-`;
-
-export const StyledFooterElements = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 30px 0px;
-  color: ${({ theme }) => theme.colors.dark};
-
-  @media (max-width: 540px) {
-    align-items: center;
-  }
-
-  h3 {
-    margin-bottom: ${({ theme }) => theme.margins.m};
-  }
-
-  p {
-    margin-bottom: ${({ theme }) => theme.margins.s};
   }
 `;
 
@@ -82,6 +82,10 @@ export const FooterLink = styled(Link)`
   text-decoration: none;
   color: ${({ theme }) => theme.colors.dark};
   margin-bottom: ${({ theme }) => theme.margins.s};
+  transition: ease 1s;
+  &:hover {
+    color: ${({ theme }) => theme.colors.goldBeige};
+  }
 `;
 
 export const StyledFooterDesigner = styled.div`
@@ -95,8 +99,12 @@ export const StyledFooterDesigner = styled.div`
   align-items: center;
 
   p {
-    @media (max-width: 330px) {
+    @media (max-width: 320px) {
       font-size: 13px;
     }
+  }
+  img {
+    width: 80px;
+    margin: ${({ theme }) => theme.margins.xs} 0;
   }
 `;
