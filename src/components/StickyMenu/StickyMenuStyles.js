@@ -28,6 +28,7 @@ export const StickyMenuText = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.s};
   @media (max-width: 540px) {
     font-size: ${({ theme }) => theme.fontSizes.xs};
+    margin-right: ${({ theme }) => theme.margins.xs};
   }
   @media (max-width: 320px) {
     font-size: ${({ theme }) => theme.fontSizes.xxs};
@@ -49,20 +50,22 @@ export const StickyMenuLink = styled(Link)`
 
 export const StickyMenuButton = styled.button`
   padding: 8px 20px;
-  opacity: 0.99;
+  opacity: 0.98;
   margin-right: ${({ theme }) => theme.margins.s};
   outline: none;
-  border: 2px solid ${({ theme }) => theme.colors.dark};
+  border: none;
   color: ${({ theme }) => theme.colors.light};
   text-transform: uppercase;
   background-color: ${({ theme }) => theme.colors.dark};
   transition: 1s all ease;
-  :hover {
-    background-color: transparent;
-    color: ${({ theme }) => theme.colors.dark};
+  &:hover {
+    background-color: rgba(53, 53, 48, 0.7);
   }
   @media (max-width: 540px) {
-    padding: 6px 6px;
+    padding: 6px 15px;
     font-size: ${({ theme }) => theme.fontSizes.xs};
+  }
+  @media (max-width: 320px) {
+    padding: 6px 10px;
   }
 `;
