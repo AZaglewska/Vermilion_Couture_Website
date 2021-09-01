@@ -29,11 +29,13 @@ export const PrivacyPolicyListMain = styled.li`
   p {
     font-size: ${({ theme }) => theme.fontSizes.l};
     color: ${({ theme }) => theme.colors.smokey};
-
     margin-bottom: ${({ theme }) => theme.margins.m};
-
+    text-align: center;
     @media (max-width: 430px) {
       font-size: ${({ theme }) => theme.fontSizes.m};
+    }
+    @media (max-width: 320px) {
+      font-size: ${({ theme }) => theme.fontSizes.s};
     }
   }
 `;
@@ -44,12 +46,25 @@ export const PrivacyPolicyNested = styled.ol`
   line-height: 25px;
   margin-bottom: ${({ theme }) => theme.margins.m};
   margin-left: ${({ theme }) => theme.margins.m};
+  @media (max-width: 320px) {
+    font-size: ${({ theme }) => theme.fontSizes.xs};
+  }
   span {
     display: block;
-    font-size: 12px;
+    font-size: ${({ theme }) => theme.fontSizes.xs};
+  }
+
+  a {
+    color: ${({ theme }) => theme.colors.lightGrey};
+    @media (max-width: 320px) {
+      font-size: ${({ theme }) => theme.fontSizes.xxs};
+    }
   }
   ul {
-    margin-left: 20px;
+    margin-left: ${({ theme }) => theme.margins.xs};
     list-style: circle;
+    @media (max-width: 320px) {
+      font-size: ${({ theme }) => theme.fontSizes.xs};
+    }
   }
 `;
