@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { navbarLanguages } from "../../languages/languagesTypes";
-import Button from "../../atoms/Button";
 import flagIconPL from "../../assets/icons/poland.svg";
 import LogoIcon from "../IconComponents/LogoIcon/LogoIcon";
-import flagIconEN from "../../assets/icons/united-kingdom.svg";
+import flagIconEN from "../../assets/icons/united-states.svg";
 import IconArrowUp from "../IconComponents/IconArrowUp/IconArrowUp";
 import IconArrowDown from "../IconComponents/IconArrowDown/IconArrowDown";
+import Button from "../../atoms/Button";
+import HamburgerMenu from "./HamburgerMenu";
+import IconList from "../IconComponents/IconList/IconList";
+import { Link } from "react-router-dom";
+import { navbarLanguages } from "../../languages/languagesTypes";
+import { connect } from "react-redux";
+import { setCurrentLanguage } from "../../actions";
 import { routes } from "../../routes";
 import {
   NavIconContent,
@@ -19,10 +23,6 @@ import {
   NavDropdownContentLink,
   NavDropbtnLinkText,
 } from "./navigationStyles/NavbarStyles.js";
-import { connect } from "react-redux";
-import { setCurrentLanguage } from "../../actions";
-import HamburgerMenu from "./HamburgerMenu";
-import IconList from "../IconComponents/IconList/IconList";
 
 const Navbar = ({ currentLanguage, setEngLanguage, setPlLanguage }) => {
   const [navLanguage, setNavLanguage] = useState([...navbarLanguages.PL]);
@@ -52,28 +52,27 @@ const Navbar = ({ currentLanguage, setEngLanguage, setPlLanguage }) => {
         </NavIconWrapper>
         <HamburgerMenu />
       </NavIconContent>
-
       <NavDropdownContainer>
-        {navLanguage.map((item) => {
+        {navLanguage.map(({ dropDown, main, route }, index) => {
           return (
-            <NavDropdown>
-              {item.dropDown.length !== 0 ? (
+            <NavDropdown key={index}>
+              {dropDown.length !== 0 ? (
                 <NavDropbtn>
-                  <NavDropbtnLinkText>{item.main}</NavDropbtnLinkText>
+                  <NavDropbtnLinkText>{main}</NavDropbtnLinkText>
                   <IconArrowDown nav="true" />
                   <IconArrowUp />
                 </NavDropbtn>
               ) : (
                 <NavDropbtn>
-                  <NavDropbtnLink to={item.route}>{item.main}</NavDropbtnLink>
+                  <NavDropbtnLink to={route}>{main}</NavDropbtnLink>
                 </NavDropbtn>
               )}
-              {item.dropDown.length !== 0 && (
+              {dropDown.length !== 0 && (
                 <NavDropdownContent>
-                  {item.dropDown.map((item) => {
+                  {dropDown.map(({ route, name }, index) => {
                     return (
-                      <NavDropdownContentLink to={item.route}>
-                        {item.name}
+                      <NavDropdownContentLink to={route} key={index}>
+                        {name}
                       </NavDropdownContentLink>
                     );
                   })}
