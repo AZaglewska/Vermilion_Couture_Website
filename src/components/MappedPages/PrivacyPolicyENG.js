@@ -19,7 +19,7 @@ const PrivacyPolicyENG = () => {
       <PrivacyPolicyElements>
         <Title>Privacy Policy </Title>
         <Line />
-        <Text styleType="biggerText">
+        <Text styleType="biggerText" privacyPolicy>
           Last updated: August 19, 2021 This Privacy Policy describes Our
           policies and procedures on the collection, use and disclosure of Your
           information when You use the Service and tells You about Your privacy
@@ -93,8 +93,14 @@ const PrivacyPolicyENG = () => {
                   visit).
                 </li>
                 <li>
-                  <b>Website</b>  refers to Vermilion Couture, accessible from 
-                  <span>http://www.vermilioncouture.com</span>
+                  <b>Website</b>  refers to Vermilion Couture, accessible from{" "}
+                  <a
+                    href="https://vermilioncouture.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    https://vermilioncouture.com/
+                  </a>
                 </li>
                 <li>
                   <b>You</b>  means the individual accessing or using the
@@ -108,7 +114,6 @@ const PrivacyPolicyENG = () => {
         </PrivacyPolicyListMain>
         <PrivacyPolicyListMain>
           <p>Collecting and Using Your Personal Data</p>
-
           <PrivacyPolicyNested>
             Types of Data Collected
             <li>
@@ -408,10 +413,8 @@ const PrivacyPolicyENG = () => {
             </li>
           </PrivacyPolicyNested>
         </PrivacyPolicyListMain>
-
         <PrivacyPolicyListMain>
           <p>Children's Privacy</p>
-
           <PrivacyPolicyNested>
             <li>
               Our Service does not address anyone under the age of 13. We do not
@@ -428,10 +431,8 @@ const PrivacyPolicyENG = () => {
             </li>
           </PrivacyPolicyNested>
         </PrivacyPolicyListMain>
-
         <PrivacyPolicyListMain>
           <p>Links to Other Websites</p>
-
           <PrivacyPolicyNested>
             <li>
               Our Service may contain links to other websites that are not
@@ -443,10 +444,8 @@ const PrivacyPolicyENG = () => {
             </li>
           </PrivacyPolicyNested>
         </PrivacyPolicyListMain>
-
         <PrivacyPolicyListMain>
           <p>Changes to this Privacy Policy</p>
-
           <PrivacyPolicyNested>
             <li>
               We may update Our Privacy Policy from time to time. We will notify
@@ -460,14 +459,12 @@ const PrivacyPolicyENG = () => {
             </li>
           </PrivacyPolicyNested>
         </PrivacyPolicyListMain>
-
         <PrivacyPolicyListMain>
           <p>Contact Us</p>
-
           <PrivacyPolicyNested>
             <li>
               If you have any questions about this Privacy Policy, You can
-              contact us by email: vermilion.team@gmail.com
+              contact us by email: contact@vermilioncouture.com
             </li>
           </PrivacyPolicyNested>
         </PrivacyPolicyListMain>
