@@ -14,7 +14,7 @@ const StyledLine = styled.div`
     styleType === "greyLine" &&
     css`
       margin-top: ${({ theme }) => theme.margins.xs};
-      border-bottom: 1.5px solid;
+      border-bottom: 1.4px solid;
       border-color: ${({ theme }) => theme.colors.smokey};
     `}
 
