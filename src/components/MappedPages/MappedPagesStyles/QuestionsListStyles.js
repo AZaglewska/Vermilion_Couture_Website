@@ -28,9 +28,12 @@ export const StyledQuestion = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.l};
   color: ${({ theme }) => theme.colors.smokey};
   margin: ${({ theme }) => theme.margins.s} 0;
-  margin-top: ${(props) => (props.first ? "30px" : "10px")};
+  margin-top: ${({ first }) => (first ? "30px" : "10px")};
 
   @media (max-width: 430px) {
     font-size: ${({ theme }) => theme.fontSizes.m};
+  }
+  @media (max-width: 320px) {
+    font-size: ${({ theme }) => theme.fontSizes.s};
   }
 `;
