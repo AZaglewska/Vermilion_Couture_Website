@@ -11,11 +11,11 @@ export const ArrowUpIcon = styled.svg`
   bottom: 10%;
   right: 1%;
   cursor: pointer;
-  fill: rgba(102, 102, 102, 0.7);
+  fill: rgba(102, 102, 102, 0.8);
   opacity: 0.3;
   transition: 1s all ease;
-  :hover {
-    fill: rgba(102, 102, 102, 0.9);
+  &:hover {
+    fill: rgba(102, 102, 102, 0.5);
   }
   @media (max-width: 430px) {
     width: 35px;
