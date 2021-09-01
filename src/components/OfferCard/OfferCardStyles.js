@@ -12,9 +12,8 @@ export const OfferCardWrapper = styled.div`
   }
 `;
 
-export const OfferCardTitle = styled.h2`
-  margin: ${({ theme }) => theme.margins.s} 0;
-  color: ${({ theme }) => theme.colors.smokey};
+export const OfferCardLineWrapper = styled.div`
+  width: 90%;
 `;
 
 export const OfferCardElementsWrapper = styled.div`
@@ -37,7 +36,7 @@ export const OfferCardElements = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px 10px;
+  margin: ${({ theme }) => theme.margins.m} ${({ theme }) => theme.margins.s};
 
   p {
     color: ${({ theme }) => theme.colors.smokey};
