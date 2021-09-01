@@ -14,49 +14,23 @@ const StyledTitle = styled.h1`
   @media (max-width: 430px) {
     font-size: ${({ theme }) => theme.fontSizes.xl};
   }
-  @media (max-width: 280px) {
+  @media (max-width: 320px) {
     font-size: ${({ theme }) => theme.fontSizes.l};
   }
-
-  ${({ styleType }) =>
-    styleType === "product" &&
-    css`
-      font-weight: ${({ theme }) => theme.fontWeight.light};
-    `}
-
   ${({ styleType }) =>
     styleType === "form" &&
     css`
       font-size: ${({ theme }) => theme.fontSizes.xl};
       color: ${({ theme }) => theme.colors.darkBrown};
-      @media (max-width: 430px) {
-        font-size: ${({ theme }) => theme.fontSizes.l};
-      }
       @media (max-width: 320px) {
         font-size: ${({ theme }) => theme.fontSizes.m};
       }
     `}
-
-    ${({ styleType }) =>
+  ${({ styleType }) =>
     styleType === "card" &&
     css`
       font-size: ${({ theme }) => theme.fontSizes.xl};
       color: ${({ theme }) => theme.colors.smokey};
-      @media (max-width: 430px) {
-        font-size: ${({ theme }) => theme.fontSizes.l};
-      }
-    `}
-
-    ${({ styleType }) =>
-    styleType === "question" &&
-    css`
-      @media (max-width: 540px) {
-        font-size: ${({ theme }) => theme.fontSizes.xl};
-      }
-
-      @media (max-width: 430px) {
-        font-size: ${({ theme }) => theme.fontSizes.l};
-      }
     `}
 `;
 
