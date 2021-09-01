@@ -11,13 +11,12 @@ import {
   StyledReactMarkdown,
 } from "./MappedPagesStyles/MeasuringStyles";
 
-const Measuring = ({ measuringData, currentLanguage }) => {
+const Measuring = ({ measuringData }) => {
   return (
     <StyledMeasuringList>
       <BackgroundBanner image={backgroundImage} />
       {measuringData.map((measuringDataElement) => {
         const { id, name, images, description } = measuringDataElement;
-
         return (
           <StyledMeasuringElements key={id}>
             <Title>{name}</Title>
