@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import IconArrowUp from "../IconComponents/IconArrowUp/IconArrowUp";
 import IconArrowDown from "../IconComponents/IconArrowDown/IconArrowDown.js";
 import flagIconPL from "../../assets/icons/poland.svg";
-import flagIconEN from "../../assets/icons/united-kingdom.svg";
+import flagIconEN from "../../assets/icons/united-states.svg";
 import IconList from "../IconComponents/IconList/IconList";
 import Button from "../../atoms/Button";
 import LogoIcon from "../IconComponents/LogoIcon/LogoIcon";
