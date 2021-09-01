@@ -8,12 +8,18 @@ export const StyledBackIcon = styled.svg`
   width: 30px;
   transition: ease 1s;
   fill: ${({ theme }) => theme.colors.lightGrey};
+  @media (max-width: 320px) {
+    width: 20px;
+  }
 `;
 export const StyledBackIconText = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.m};
   color: ${({ theme }) => theme.colors.lightGrey};
   margin-left: ${({ theme }) => theme.margins.xs};
   transition: ease 1s;
+  @media (max-width: 320px) {
+    font-size: ${({ theme }) => theme.fontSizes.s};
+  }
 `;
 
 export const StyledBackIconWrapper = styled.div`

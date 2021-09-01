@@ -15,4 +15,7 @@ export const StyledHeartIcon = styled.svg`
 export const StyledHeartIconText = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.m};
   color: ${({ theme }) => theme.colors.smokey};
+  @media (max-width: 320px) {
+    font-size: ${({ theme }) => theme.fontSizes.s};
+  }
 `;
