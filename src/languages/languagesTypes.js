@@ -1,7 +1,7 @@
 export const navbarLanguages = {
   ENG: [
     {
-      main: "About Vermilion",
+      main: "Vermilion",
       isOpen: false,
       dropDown: [
         { name: "About", route: "/about-vermilion" },
@@ -9,7 +9,7 @@ export const navbarLanguages = {
       ],
     },
     {
-      main: "Ready collections",
+      main: "Special",
       isOpen: false,
       dropDown: [
         { name: "Wedding", route: "/wedding-collection" },
@@ -17,7 +17,7 @@ export const navbarLanguages = {
       ],
     },
     {
-      main: "Basic",
+      main: "Classic",
       isOpen: false,
       dropDown: [
         { name: "Underbust", route: "/underbust-collection" },
@@ -42,7 +42,7 @@ export const navbarLanguages = {
 
   PL: [
     {
-      main: "O Vermilion",
+      main: "Vermilion",
       isOpen: false,
       dropDown: [
         { name: "O nas", route: "/o-vermilion" },
@@ -50,7 +50,7 @@ export const navbarLanguages = {
       ],
     },
     {
-      main: "Gotowe kreacje",
+      main: "Kreacje",
       isOpen: false,
       dropDown: [
         { name: "Ślubne", route: "/kolekcja-ślubna" },
@@ -59,7 +59,7 @@ export const navbarLanguages = {
     },
 
     {
-      main: "Kolekcja podstawowa",
+      main: "Classic",
       isOpen: false,
       dropDown: [
         { name: "Underbust", route: "/kolekcja-underbust" },
