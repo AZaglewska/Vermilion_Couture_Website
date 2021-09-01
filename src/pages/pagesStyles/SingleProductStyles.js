@@ -29,6 +29,7 @@ export const SingleProductIcon = styled.svg`
   transition-property: top, opacity;
   transition-duration: 0.3s;
   transition-delay: 0s;
+  fill: ${({ theme }) => theme.colors.light};
 `;
 
 export const SingleProductCarouselWrapper = styled.div`
@@ -63,12 +64,13 @@ export const SingleProductPrice = styled.p`
   color: ${({ theme }) => theme.colors.smokey};
   margin: ${({ theme }) => theme.margins.l} 0;
   span {
-    margin-left: 5px;
+    margin-left: ${({ theme }) => theme.margins.xs};
   }
 `;
 
 export const SingleProductText = styled.div`
-  margin: 20px 0 40px 0;
+  margin: ${({ theme }) => theme.margins.m} 0 ${({ theme }) => theme.margins.xl}
+    0;
 `;
 
 export const SingleProductIconWrapper = styled.div`
