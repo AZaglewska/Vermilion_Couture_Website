@@ -19,7 +19,7 @@ const PrivacyPolicyPL = () => {
       <PrivacyPolicyElements>
         <Title>Polityka prywatności </Title>
         <Line />
-        <Text styleType="biggerText">
+        <Text styleType="biggerText" privacyPolicy>
           Polityka prywatności opisuje zasady przetwarzania przez nas informacji
           na Twój temat, w tym danych osobowych oraz ciasteczek, czyli tzw.
           cookies.
@@ -31,7 +31,14 @@ const PrivacyPolicyPL = () => {
           <PrivacyPolicyNested>
             <li>
               Niniejsza polityka dotyczy Serwisu www, funkcjonującego pod
-              adresem url: vermilioncouture.com
+              adresem:{" "}
+              <a
+                href="https://vermilioncouture.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                https://vermilioncouture.com/
+              </a>
             </li>
             <li>
               Operatorem serwisu oraz Administratorem danych osobowych jest:
@@ -74,7 +81,6 @@ const PrivacyPolicyPL = () => {
         </PrivacyPolicyListMain>
         <PrivacyPolicyListMain>
           <p>Wybrane metody ochrony danych stosowane przez Operatora</p>
-
           <PrivacyPolicyNested>
             <li>
               Istotnym elementem ochrony danych jest regularna aktualizacja
@@ -84,10 +90,8 @@ const PrivacyPolicyPL = () => {
             </li>
           </PrivacyPolicyNested>
         </PrivacyPolicyListMain>
-
         <PrivacyPolicyListMain>
           <p>Hosting</p>
-
           <PrivacyPolicyNested>
             <li>
               Serwis jest hostowany (technicznie utrzymywany) na serwera
@@ -95,12 +99,10 @@ const PrivacyPolicyPL = () => {
             </li>
           </PrivacyPolicyNested>
         </PrivacyPolicyListMain>
-
         <PrivacyPolicyListMain>
           <p>
             Twoje prawa i dodatkowe informacje o sposobie wykorzystania danych
           </p>
-
           <PrivacyPolicyNested>
             <li>
               W niektórych sytuacjach Administrator ma prawo przekazywać Twoje
@@ -134,7 +136,6 @@ const PrivacyPolicyPL = () => {
                 <li>oraz przenoszenia danych.</li>
               </ul>
             </li>
-
             <li>
               Przysługuje Ci prawo do złożenia sprzeciwu w zakresie
               przetwarzania wskazanego w pkt 3.3 c) wobec przetwarzania danych
@@ -167,10 +168,8 @@ const PrivacyPolicyPL = () => {
             </li>
           </PrivacyPolicyNested>
         </PrivacyPolicyListMain>
-
         <PrivacyPolicyListMain>
           <p>Informacje w formularzach</p>
-
           <PrivacyPolicyNested>
             <li>
               Serwis zbiera informacje podane dobrowolnie przez użytkownika, w
@@ -208,7 +207,6 @@ const PrivacyPolicyPL = () => {
         </PrivacyPolicyListMain>
         <PrivacyPolicyListMain>
           <p>Istotne techniki marketingowe</p>
-
           <PrivacyPolicyNested>
             <li>
               Operator stosuje analizę statystyczną ruchu na stronie, poprzez
@@ -218,8 +216,14 @@ const PrivacyPolicyPL = () => {
               ciasteczek w urządzeniu końcowym użytkownika. W zakresie
               informacji o preferencjach użytkownika gromadzonych przez sieć
               reklamową Google użytkownik może przeglądać i edytować informacje
-              wynikające z plików cookies przy pomocy narzędzia:
-              <span>https://www.google.com/ads/preferences/</span>
+              wynikające z plików cookies przy pomocy narzędzia:{" "}
+              <a
+                href="https://adssettings.google.com/authenticated?hl=pl"
+                target="_blank"
+                rel="noreferrer"
+              >
+                https://adssettings.google.com/authenticated?hl=pl
+              </a>
             </li>
             <li>
               Operator stosuje techniki remarketingowe, pozwalające na
@@ -259,7 +263,6 @@ const PrivacyPolicyPL = () => {
             </li>
           </PrivacyPolicyNested>
         </PrivacyPolicyListMain>
-
         <PrivacyPolicyListMain>
           <p>Informacja o plikach cookies</p>
           <PrivacyPolicyNested>
@@ -325,7 +328,6 @@ const PrivacyPolicyPL = () => {
             </li>
           </PrivacyPolicyNested>
         </PrivacyPolicyListMain>
-
         <PrivacyPolicyListMain>
           <p>
             Zarządzanie plikami cookies – jak w praktyce wyrażać i cofać zgodę?
@@ -357,7 +359,7 @@ const PrivacyPolicyPL = () => {
             </li>
           </PrivacyPolicyNested>
         </PrivacyPolicyListMain>
-        <Text styleType="biggerText">
+        <Text styleType="biggerText" privacyPolicy>
           Niniejszy wzór polityki został wygenerowany bezpłatnie, w celach
           informacyjnych, w oparciu o naszą wiedzę, branżowe praktyki i przepisy
           prawa obowiązujące na dzień 2018-08-14. Zalecamy sprawdzenie wzoru
