@@ -90,7 +90,8 @@ export const MobileButtonWrapper = styled.div`
   margin: ${({ dropdownOpen }) => (dropdownOpen ? "5px" : "20px")};
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
     ${StyledIconArrowDown} {
       color: ${({ theme }) => theme.colors.goldBeige};
     }
@@ -129,7 +130,7 @@ export const MobileDropdownContentLink = styled(Link)`
 
   &:hover,
   &:focus {
-    color: ${({ theme }) => theme.colors.snowGrey};
+    color: ${({ theme }) => theme.colors.softGrey};
   }
 
   @media (max-width: 540px) {
