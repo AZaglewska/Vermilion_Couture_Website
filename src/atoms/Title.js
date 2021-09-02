@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 import { titleAnimation } from "../globalStyles/Animations";
 
 const StyledTitle = styled.h1`
-  color: ${({ theme }) => theme.colors.darkGrey};
+  color: ${({ theme }) => theme.colors.dark};
   font-size: ${({ theme }) => theme.fontSizes.xxl};
   opacity: 0;
   position: relative;
