@@ -12,7 +12,7 @@ export const StyledAlertWrapper = styled.div`
 `;
 
 export const StyledAlert = styled.p`
-  color: ${({ error }) => (error ? "#ba0021" : "#2e8b57")};
+  color: ${({ error }) => (error ? "#ba0021" : "#1f613c")};
   animation: ${show} 0.1s ease forwards;
   animation-duration: 3s;
 `;
