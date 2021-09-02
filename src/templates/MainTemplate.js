@@ -11,9 +11,9 @@ const MainTemplate = ({ children }) => {
   const [showArrowTop, setShowArrowTop] = useState(false);
 
   const showAndHideArrowTop = () => {
-    if (!showArrowTop && window.pageYOffset < 500) {
+    if (!showArrowTop && window.pageYOffset < 300) {
       setShowArrowTop(true);
-    } else if (showArrowTop && window.pageYOffset >= 500) {
+    } else if (showArrowTop && window.pageYOffset >= 300) {
       setShowArrowTop(false);
     }
   };
@@ -27,7 +27,6 @@ const MainTemplate = ({ children }) => {
 
   return (
     <>
-      {/* <AnimatedLogo isShown={isShown} /> */}
       {isShown ? (
         <>
           <Navbar />
@@ -39,7 +38,7 @@ const MainTemplate = ({ children }) => {
         </>
       ) : (
         <>
-          <AnimatedLogo isShown={isShown} />
+          <AnimatedLogo />
         </>
       )}
     </>
