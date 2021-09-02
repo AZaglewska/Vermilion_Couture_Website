@@ -25,15 +25,7 @@ export const StyledBackIconText = styled.p`
 export const StyledBackIconWrapper = styled.div`
   align-self: center;
   cursor: pointer;
-  &:hover {
-    ${StyledBackIcon} {
-      fill: ${({ theme }) => theme.colors.goldBeige};
-    }
-    ${StyledBackIconText} {
-      color: ${({ theme }) => theme.colors.goldBeige};
-    }
-  }
-
+  &:hover,
   &:focus {
     ${StyledBackIcon} {
       fill: ${({ theme }) => theme.colors.goldBeige};
