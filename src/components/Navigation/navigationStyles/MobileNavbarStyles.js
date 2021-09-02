@@ -57,14 +57,14 @@ export const MobileDropbtn = styled.button`
   background-color: transparent;
   border: none;
   position: relative;
-  font-size: ${({ theme }) => theme.fontSizes.xl};
+  font-size: ${({ theme }) => theme.fontSizes.l};
   margin: ${({ contact }) => (contact ? "5px 16px 0 0" : "")};
 
-  @media (max-width: 540px) {
+  @media (max-width: 430px) {
     font-size: ${({ theme }) => theme.fontSizes.m};
   }
 
-  @media (max-width: 360px) {
+  @media (max-width: 320px) {
     font-size: ${({ theme }) => theme.fontSizes.s};
   }
 
@@ -122,21 +122,29 @@ export const MobileDropdownContent = styled.div`
 export const MobileDropdownContentLink = styled(Link)`
   text-decoration: none;
   color: ${({ theme }) => theme.colors.delicateGrey};
-  font-size: ${({ theme }) => theme.fontSizes.l};
+  font-size: ${({ theme }) => theme.fontSizes.m};
   animation: ${show} 0.1s ease forwards;
   animation-duration: 1s;
   transition: ease 1s;
-  margin: ${({ theme }) => theme.margins.xs} 0;
+  margin: ${({ theme }) => theme.margins.s} 0 ${({ theme }) => theme.margins.xs}
+    0;
 
   &:hover,
   &:focus {
-    color: ${({ theme }) => theme.colors.softGrey};
+    color: ${({ theme }) => theme.colors.smokey};
   }
 
   @media (max-width: 540px) {
-    font-size: ${({ theme }) => theme.fontSizes.s};
+    font-size: 18px;
   }
-  @media (max-width: 360px) {
+
+  @media (max-width: 430px) {
+    font-size: 14px;
+    margin: ${({ theme }) => theme.margins.xs} 0
+      ${({ theme }) => theme.margins.xs} 0;
+  }
+
+  @media (max-width: 320px) {
     font-size: ${({ theme }) => theme.fontSizes.xs};
   }
 `;
