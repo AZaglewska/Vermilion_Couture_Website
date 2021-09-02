@@ -52,16 +52,16 @@ export const StyledFooterContactWrapper = styled.div`
   svg {
     width: 15px;
     fill: ${({ theme }) => theme.colors.dark};
-    margin-right: 5px;
+    margin-right: ${({ theme }) => theme.margins.xs};
     transition: ease 1s;
   }
 
   :hover {
     ${StyledFooterContactLink} {
-      color: ${({ theme }) => theme.colors.goldBeige};
+      color: ${({ theme }) => theme.colors.delicateGrey};
     }
     svg {
-      fill: ${({ theme }) => theme.colors.goldBeige};
+      fill: ${({ theme }) => theme.colors.delicateGrey};
     }
   }
 `;
@@ -84,7 +84,7 @@ export const FooterLink = styled(Link)`
   margin-bottom: ${({ theme }) => theme.margins.s};
   transition: ease 1s;
   &:hover {
-    color: ${({ theme }) => theme.colors.goldBeige};
+    color: ${({ theme }) => theme.colors.delicateGrey};
   }
 `;
 
