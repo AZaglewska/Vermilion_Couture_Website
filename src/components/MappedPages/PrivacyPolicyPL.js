@@ -46,10 +46,8 @@ const PrivacyPolicyPL = () => {
               Warszawa
             </li>
             <li>
-              Operatorem serwisu oraz Administratorem danych osobowych jest:
-              Vermilion Couture Katarzyna Borychowska Chełmska 6/8 m 1 00-725
-              Warszawa Adres kontaktowy poczty elektronicznej operatora:
-              katixb@o2.pl
+              Adres kontaktowy poczty elektronicznej operatora:
+              contact@vermilioncouture.com
             </li>
             <li>
               Operator jest Administratorem Twoich danych osobowych w
@@ -95,7 +93,14 @@ const PrivacyPolicyPL = () => {
           <PrivacyPolicyNested>
             <li>
               Serwis jest hostowany (technicznie utrzymywany) na serwera
-              operatora: inna firma
+              operatora:{" "}
+              <a
+                href="https://www.aftermarket.pl/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                aftermarket.pl Limited
+              </a>
             </li>
           </PrivacyPolicyNested>
         </PrivacyPolicyListMain>
@@ -359,21 +364,6 @@ const PrivacyPolicyPL = () => {
             </li>
           </PrivacyPolicyNested>
         </PrivacyPolicyListMain>
-        <Text styleType="biggerText" privacyPolicy>
-          Niniejszy wzór polityki został wygenerowany bezpłatnie, w celach
-          informacyjnych, w oparciu o naszą wiedzę, branżowe praktyki i przepisy
-          prawa obowiązujące na dzień 2018-08-14. Zalecamy sprawdzenie wzoru
-          polityki przed użyciem jej na stronie. Wzór opiera się na najczęściej
-          występujących na stronach internetowych sytuacjach, ale może nie
-          odzwierciedlać pełnej i dokładnej specyfiki Twojej strony www.
-          Przeczytaj uważnie wygenerowany dokument i w razie potrzeb dostosuj go
-          do Twojej sytuacji lub zasięgnij porady prawnej. Nie bierzemy
-          odpowiedzianości za skutki posługiwania się tym dokumentem, ponieważ
-          tylko Ty masz wpłw na to, czy wszystkie informacje w nim zawarte są
-          zgodne z prawdą. Zwróć także uwagę, że Polityka Prywatności, nawet
-          najlepsza, jest tylko jednym z ekmentów Twojej troski o dane osobowe i
-          prywatność użytkownika na stronie www.
-        </Text>
         <Line />
       </PrivacyPolicyList>
     </PrivacyPolicyContent>
