@@ -90,7 +90,7 @@ export const NavDropdownContentLink = styled(Link)`
 
   &:hover,
   &:focus {
-    color: ${({ theme }) => theme.colors.softGrey};
+    color: ${({ theme }) => theme.colors.smokey};
   }
 `;
 
