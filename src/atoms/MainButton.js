@@ -16,6 +16,9 @@ const StyledButtonLine = styled.div`
   border-color: ${({ theme }) => theme.colors.light};
   margin: 13px 0;
   opacity: 0;
+  @media (max-width: 430px) {
+    margin: 6px 0;
+  }
 `;
 
 const StyledMainButton = styled.button`
@@ -37,9 +40,15 @@ const StyledMainButton = styled.button`
   @media (max-width: 540px) {
     width: 90%;
   }
-  @media (max-width: 320px) {
-    font-size: 15px;
+  @media (max-width: 430px) {
+    width: 70%;
+    height: 45px;
+    font-size: ${({ theme }) => theme.fontSizes.s};
     letter-spacing: 0;
+  }
+
+  @media (max-width: 320px) {
+    font-size: ${({ theme }) => theme.fontSizes.xs};
   }
 
   &:before {
@@ -55,20 +64,7 @@ const StyledMainButton = styled.button`
     background-color: ${({ theme }) => theme.colors.buttonBeige};
     z-index: -1;
   }
-  &:hover {
-    ${StyledButtonLine} {
-      animation: ${lineAnimation} 0.1s ease forwards;
-      animation-duration: 0.5s;
-      animation-fill-mode: forwards;
-    }
-    &:before {
-      -webkit-transition: 0.5s all ease;
-      transition: 0.5s all ease;
-      left: 0;
-      right: 0;
-      opacity: 1;
-    }
-  }
+  &:hover,
   &:focus {
     ${StyledButtonLine} {
       animation: ${lineAnimation} 0.1s ease forwards;
@@ -107,6 +103,9 @@ const StyledButtonIcon = styled.svg`
   width: 22px;
   height: 22px;
   transition: fill 1s;
+  @media (max-width: 430px) {
+    width: 18px;
+  }
 `;
 
 const MainButton = ({ children, currentLanguage }) => {
