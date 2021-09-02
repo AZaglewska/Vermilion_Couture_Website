@@ -22,6 +22,9 @@ const StyledTitle = styled.h1`
     css`
       font-size: ${({ theme }) => theme.fontSizes.xl};
       color: ${({ theme }) => theme.colors.darkBrown};
+      @media (max-width: 430px) {
+        font-size: ${({ theme }) => theme.fontSizes.l};
+      }
       @media (max-width: 320px) {
         font-size: ${({ theme }) => theme.fontSizes.m};
       }
@@ -31,6 +34,9 @@ const StyledTitle = styled.h1`
     css`
       font-size: ${({ theme }) => theme.fontSizes.xl};
       color: ${({ theme }) => theme.colors.smokey};
+      @media (max-width: 430px) {
+        font-size: ${({ theme }) => theme.fontSizes.l};
+      }
     `}
 `;
 
