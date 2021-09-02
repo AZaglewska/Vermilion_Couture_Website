@@ -21,7 +21,7 @@ export const NavIconWrapper = styled.div`
   }
   :hover {
     ${StyledLogo} {
-      fill: ${({ theme }) => theme.colors.goldBeige};
+      fill: ${({ theme }) => theme.colors.darkBeige};
     }
   }
 `;
@@ -38,22 +38,16 @@ export const NavDropdownContainer = styled.div`
 `;
 
 export const NavDropbtn = styled.button`
-  color: ${({ theme }) => theme.colors.dark};
   background-color: transparent;
   padding: 16px 0;
   border: none;
-
-  &:hover,
-  &:focus {
-    color: ${({ theme }) => theme.colors.goldBeige};
-  }
 
   &:after {
     content: "";
     display: block;
     width: 0;
     height: 1px;
-    background-color: ${({ theme }) => theme.colors.goldBeige};
+    background-color: ${({ theme }) => theme.colors.greyBeige};
     transition: width 0.3s;
     position: absolute;
     top: 78%;
@@ -86,7 +80,7 @@ export const NavDropdownContent = styled.div`
 
 export const NavDropdownContentLink = styled(Link)`
   text-decoration: none;
-  color: ${({ theme }) => theme.colors.lightGrey};
+  color: ${({ theme }) => theme.colors.delicateGrey};
   font-size: ${({ theme }) => theme.fontSizes.s};
   display: block;
   position: relative;
@@ -114,10 +108,10 @@ export const NavDropdown = styled.div`
     }
 
     ${NavDropbtnLinkText} {
-      color: ${({ theme }) => theme.colors.goldBeige};
+      color: ${({ theme }) => theme.colors.greyBeige};
     }
     ${NavDropbtnLink} {
-      color: ${({ theme }) => theme.colors.goldBeige};
+      color: ${({ theme }) => theme.colors.greyBeige};
     }
 
     ${NavDropbtn} {
@@ -133,7 +127,7 @@ export const NavDropdown = styled.div`
 
     ${StyledIconArrowUp} {
       display: inline-block;
-      color: ${({ theme }) => theme.colors.goldBeige};
+      color: ${({ theme }) => theme.colors.greyBeige};
       margin: -2px 3px;
     }
   }
