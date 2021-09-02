@@ -7,15 +7,14 @@ export const mainTheme = {
     buttonBeige: "#ecdcc7",
     darkBeige: "#dbbd96",
     greyBeige: "#d9c7b0",
-    darkGrey: "#6f7e7c",
     smokey: "#666666",
     lightGrey: "#999999",
     snowGrey: "#d3d3d3",
-    darkTransparent: "rgba(0, 0, 0, 0.3)",
     softGrey: "#dcdcdc",
-    delicateGrey: "#b3aeaa",
+    delicateGrey: "#a19c99",
     darkBrown: "#403d39",
     redAlert: "#ba0021",
+    darkTransparent: "rgba(0, 0, 0, 0.3)",
   },
 
   margins: {
