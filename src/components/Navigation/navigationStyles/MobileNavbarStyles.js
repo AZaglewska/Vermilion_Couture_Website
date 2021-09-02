@@ -40,7 +40,7 @@ export const MobileIconWrapper = styled.div`
   width: ${({ flag }) => (flag ? "20%" : "60%")};
   &:hover {
     ${StyledLogo} {
-      fill: ${({ theme }) => theme.colors.goldBeige};
+      fill: ${({ theme }) => theme.colors.darkBeige};
     }
   }
 `;
@@ -73,7 +73,7 @@ export const MobileDropbtn = styled.button`
     display: block;
     width: 0;
     height: 1px;
-    background-color: ${({ theme }) => theme.colors.goldBeige};
+    background-color: ${({ theme }) => theme.colors.greyBeige};
     transition: width 0.3s;
     position: absolute;
     top: 108%;
@@ -93,22 +93,22 @@ export const MobileButtonWrapper = styled.div`
   &:focus,
   &:active {
     ${StyledIconArrowDown} {
-      color: ${({ theme }) => theme.colors.goldBeige};
+      color: ${({ theme }) => theme.colors.greyBeige};
     }
 
     ${StyledIconArrowUp} {
-      color: ${({ theme }) => theme.colors.goldBeige};
+      color: ${({ theme }) => theme.colors.greyBeige};
     }
 
     ${MobileDropbtn} {
-      color: ${({ theme }) => theme.colors.goldBeige};
+      color: ${({ theme }) => theme.colors.greyBeige};
       :after {
         width: 100%;
         transition: 0.3s;
       }
     }
     ${MobileDropbtnLink} {
-      color: ${({ theme }) => theme.colors.goldBeige};
+      color: ${({ theme }) => theme.colors.greyBeige};
     }
   }
 `;
@@ -121,7 +121,7 @@ export const MobileDropdownContent = styled.div`
 
 export const MobileDropdownContentLink = styled(Link)`
   text-decoration: none;
-  color: ${({ theme }) => theme.colors.lightGrey};
+  color: ${({ theme }) => theme.colors.delicateGrey};
   font-size: ${({ theme }) => theme.fontSizes.l};
   animation: ${show} 0.1s ease forwards;
   animation-duration: 1s;
