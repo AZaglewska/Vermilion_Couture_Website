@@ -12,7 +12,7 @@ export const StyledLogo = styled.svg`
   fill: ${({ theme }) => theme.colors.dark};
   transition: fill 0.5s;
   :hover {
-    fill: ${({ theme }) => theme.colors.lightGold};
+    fill: ${({ theme }) => theme.colors.darkBeige};
   }
 `;
 
