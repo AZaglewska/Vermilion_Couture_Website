@@ -1,6 +1,6 @@
 import React from "react";
 import IconList from "../IconComponents/IconList/IconList";
-import AriAnnLogo from "../../assets/logo/LogoWhite.svg";
+import AriAnnLogo from "../../assets/logo/AriAnnLogo.svg";
 import { footerLanguages } from "../../languages/languagesTypes";
 import { connect } from "react-redux";
 import { routes } from "../../routes";
