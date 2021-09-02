@@ -36,7 +36,7 @@ export const colorChange = keyframes`
     }
     to {
   
-     fill:#dbc09a;
+     fill:#dbbd96;
     }
 
 `;
