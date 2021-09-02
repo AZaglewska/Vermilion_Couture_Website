@@ -49,9 +49,8 @@ export const OfferCardElements = styled.div`
   }
 `;
 
-export const OfferCardIcon = styled.svg`
+export const OfferCardIcon = styled.img`
   width: 60px;
-  fill: ${({ theme }) => theme.colors.smokey};
 
   @media (max-width: 430px) {
     width: 40px;
