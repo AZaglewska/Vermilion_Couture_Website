@@ -34,12 +34,13 @@ https://www.vermilioncouture.com/
 
 # A mobile view on Xiaomi redmi note 7:
 
-<img src="https://github.com/AZaglewska/Vermilion_Couture_Website/blob/main/src/assets/mobieView/1630661971850.jpg" width="200" height="400" /><img src="https://github.comAZaglewskaVermilion_Couture_Website/blob/main/src/assets/mobieView1630661971799.jpg" width="200" height="400" >
+<img src="https://github.com/AZaglewska/Vermilion_Couture_Website/blob/main/src/assets/mobieView/1630661971850.jpg" width="200" height="400" />
+<img src="https://github.comAZaglewskaVermilion_Couture_Website/blob/main/src/assets/mobieView1630661971799.jpg" width="200" height="400" >
 
-<img src="https://github.com/AZaglewska/Vermilion_Couture_Website/blob/main/src/assets/mobieView/1630661971828.jpg") width="200" height="400" />
-<img src="https://github.com/AZaglewska/Vermilion_Couture_Website/blob/main/src/assets/mobieView/1630661971820.jpg") width="200" height="400" />
-<img src="https://github.com/AZaglewska/Vermilion_Couture_Website/blob/main/src/assets/mobieView/1630661971814.jpg") width="200" height="400" />
-<img src="https://github.com/AZaglewska/Vermilion_Couture_Website/blob/main/src/assets/mobieView/1630661971842.jpg") width="200" height="400" />
+<img src="https://github.com/AZaglewska/Vermilion_Couture_Website/blob/main/src/assets/mobieView/1630661971828.jpg" width="200" height="400" />
+<img src="https://github.com/AZaglewska/Vermilion_Couture_Website/blob/main/src/assets/mobieView/1630661971820.jpg" width="200" height="400" />
+<img src="https://github.com/AZaglewska/Vermilion_Couture_Website/blob/main/src/assets/mobieView/1630661971814.jpg" width="200" height="400" />
+<img src="https://github.com/AZaglewska/Vermilion_Couture_Website/blob/main/src/assets/mobieView/1630661971842.jpg" width="200" height="400" />
 
 ## Getting started:
 
