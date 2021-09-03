@@ -3,7 +3,7 @@
 ## Overview:
 
 A dynamic website created for the Vermilion Couture brand mainly for business/portfolio reasons.
-The website was created in ReactJS using Contentful CMS for dynamically updating the data (adding new corsets projects with full description and images). In addition Redux.js was also used in the project to manage the state of the application. The page also uses React-Router-dom for navigation and Styled-components for layout styles. The website also has the option to change the language, switching from Polish to English.en
+The website was created in ReactJS using Contentful CMS for dynamically updating the data (adding new corsets projects with full description and images). In addition Redux.js was also used in the project to manage the state of the application. The page also uses React-Router-dom for navigation and Styled-components for layout styles. The website also has the option to change the language, switching from Polish to English.
 
 ### The Most significant features:
 
@@ -34,9 +34,9 @@ https://www.vermilioncouture.com/
 
 # A mobile view on Xiaomi redmi note 7:
 
-- ![alt text](https://github.com/AZaglewska/Vermilion_Couture_Website/blob/main/src/assets/mobieView/1630661971850.jpg)
-- ![alt text](https://github.com/AZaglewska/Vermilion_Couture_Website/blob/main/src/assets/mobieView/1630661971799.jpg)
-- ![alt text](https://github.com/AZaglewska/Vermilion_Couture_Website/blob/main/src/assets/mobieView/1630661971828.jpg)
+![alt text](https://github.com/AZaglewska/Vermilion_Couture_Website/blob/main/src/assets/mobieView/1630661971850.jpg width=100)
+![alt text](https://github.com/AZaglewska/Vermilion_Couture_Website/blob/main/src/assets/mobieView/1630661971799.jpg)
+![alt text](https://github.com/AZaglewska/Vermilion_Couture_Website/blob/main/src/assets/mobieView/1630661971828.jpg)
 
 ## Getting started:
 
@@ -71,13 +71,13 @@ Browser will automatically open localhost:3000/
 
 ## Photos and Icons:
 
-All photos of corsets were made in a professional photo studio, by a photographer Emilia Lyon (https://emilialyon.com/pl/) at the special request of the Vermilion Couture brand. The designer does not agree to copying, modifying and sharing photos on other websites. If you have any question about the photos please contact the Vermilion Couture brand by email: contact@vermilioncouture.com
+All photos of corsets were made in a professional photo studio, by a photographer Emilia Lyon (https://emilialyon.com/pl/) for the special request of the Vermilion Couture brand. The designer does not agree to copying, modifying and sharing photos on other websites. If you have any question about the photos please contact the Vermilion Couture brand by email: contact@vermilioncouture.com
 
-The rest of the photos(fabrics and askedQuestions routes) were take from:
+The rest of the photos (especially in the fabrics and askedQuestions routes) were take from:
 
 - https://www.pexels.com/pl-pl/ and they are free for commercial use.
 
-- Vermilion Couture Logo is created by a graphic designer (https://www.instagram.com/ewuwka/, https://www.facebook.com/ewuwka) at the special request of the Vermilion Couture brand. The designer does not agree to copying, sharing and modifying brand logo. If you have any question about the logo please contact the Vermilion Couture by email: contact@vermilioncouture.com
+- Vermilion Couture Logo is created by a graphic designer (https://www.instagram.com/ewuwka/, https://www.facebook.com/ewuwka) for the special request of the Vermilion Couture brand. The designer does not agree to copying, sharing and modifying brand logo. If you have any question about the logo please contact the Vermilion Couture by email: contact@vermilioncouture.com
 
 - Icons were taken from https://www.flaticon.com/ and they are free for commercial use.
 
