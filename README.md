@@ -3,7 +3,7 @@
 ## Overview:
 
 A dynamic website created for the Vermilion Couture brand mainly for business/portfolio reasons.
-The website was created in ReactJS using Contentful CMS for dynamically updating the data (adding new corsets projects with full description and images). In addition Redux.js was also used in the project to manage the state of the application. The page also uses React-Router-dom for navigation and Styled-components for layout styles. The website also has the option to change the language, switching from Polish to English.
+The website was created in ReactJS using Contentful CMS for dynamically updating the data (adding new corsets projects with full description and images). In addition Redux.js was also used in the project to manage the state of the application. The page also uses React-Router-dom for navigation and Styled-components for layout styles. The website also has the option to change the language, switching from Polish to English.en
 
 ### The Most significant features:
 
