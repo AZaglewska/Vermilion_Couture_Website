@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+# Vermilion Couture website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview:
 
-## Available Scripts
+A dynamic website created for the Vermilion Couture brand mainly for business/portfolio reasons.
+The website was created in ReactJS using Contentful CMS for dynamically updating the data (adding new corsets projects with full description and images). In addition Redux.js was also used in the project to manage the state of the application. The page also uses React-Router-dom for navigation and Styled-components for layout styles. The website also has the option to change the language, switching from Polish to English.
 
-In the project directory, you can run:
+### The Most significant features:
 
-### `npm start`
+- updating the data(adding new images, product description, guide prices) using Contentful CMS,
+- viewing product galleries,
+- leaving a message via contact form.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![gif](https://github.com/AZaglewska/Vermilion_Couture_Website/blob/main/src/assets/gif/Peek%202021-09-03%2011-16.gif)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Official website addresse:
 
-### `npm test`
+https://www.vermilioncouture.com/
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Main Tech stack:
 
-### `npm run build`
+- ReactJS,
+- Redux.js
+- Contentful CMS,
+- React-Router-dom,
+- EmailJS,
+- Formik, Yup,
+- RWD,
+- Styled-components,
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Mobile view:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- The website is fully responsive on the latest and the most popular phone models
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# A mobile view on Xiaomi redmi note 7:
 
-### `npm run eject`
+- ![alt text](https://github.com/AZaglewska/Vermilion_Couture_Website/blob/main/src/assets/mobieView/1630661971850.jpg)
+- ![alt text](https://github.com/AZaglewska/Vermilion_Couture_Website/blob/main/src/assets/mobieView/1630661971799.jpg)
+- ![alt text](https://github.com/AZaglewska/Vermilion_Couture_Website/blob/main/src/assets/mobieView/1630661971828.jpg)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Getting started:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+These instructions will get you a copy of the project up and running on your local machine
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Installing:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+First of all clone the repository to your local machine.
 
-## Learn More
+Check if you have node and npm installed. Run this command in your terminal:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- node -v
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To confirm that you have npm installed you can run this command in your terminal:
 
-### Code Splitting
+- npm -v
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+If you checked your node and npm run a development server with:
 
-### Analyzing the Bundle Size
+- npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Browser will automatically open localhost:3000/
 
-### Making a Progressive Web App
+## Website Inspiration:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- https://ziadnakad.com/,
+- https://rino-pelle.com/,
+- https://www.karl.com/pl,
+- https://www.sleepwiseconsulting.com/,
+- https://isabelmoranta.com/
+- https://www.mayahansen.com/,
 
-### Advanced Configuration
+## Photos and Icons:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+All photos of corsets were made in a professional photo studio, by a photographer Emilia Lyon (https://emilialyon.com/pl/) at the special request of the Vermilion Couture brand. The designer does not agree to copying, modifying and sharing photos on other websites. If you have any question about the photos please contact the Vermilion Couture brand by email: contact@vermilioncouture.com
 
-### Deployment
+The rest of the photos(fabrics and askedQuestions routes) were take from:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- https://www.pexels.com/pl-pl/ and they are free for commercial use.
 
-### `npm run build` fails to minify
+- Vermilion Couture Logo is created by a graphic designer (https://www.instagram.com/ewuwka/, https://www.facebook.com/ewuwka) at the special request of the Vermilion Couture brand. The designer does not agree to copying, sharing and modifying brand logo. If you have any question about the logo please contact the Vermilion Couture by email: contact@vermilioncouture.com
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Icons were taken from https://www.flaticon.com/ and they are free for commercial use.
+
+- Ari-ann Logo is created by me using Adobe Illustrator and I do not agree to sharing, copying and modifying of the logo to other websites.
+
+if you have any problems to run the project or have any other questions, feel free to contact me by e-mail:
+web.annazaglewska@gmail.com
