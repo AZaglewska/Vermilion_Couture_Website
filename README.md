@@ -34,10 +34,9 @@ https://www.vermilioncouture.com/
 
 # A mobile view on Xiaomi redmi note 7:
 
-<img src="https://github.com/AZaglewska/Vermilion_Couture_Website/blob/main/src/assets/mobieView/1630661971850.jpg" width="200" height="200" />
-
-![alt text](https://github.com/AZaglewska/Vermilion_Couture_Website/blob/main/src/assets/mobieView/1630661971799.jpg)
-![alt text](https://github.com/AZaglewska/Vermilion_Couture_Website/blob/main/src/assets/mobieView/1630661971828.jpg)
+<img src="https://github.com/AZaglewska/Vermilion_Couture_Website/blob/main/src/assets/mobieView/1630661971850.jpg" width="200" height="400" />
+<img src="https://github.com/AZaglewska/Vermilion_Couture_Website/blob/main/src/assets/mobieView/1630661971799.jpg" width="200" height="400" />
+<img src="https://github.com/AZaglewska/Vermilion_Couture_Website/blob/main/src/assets/mobieView/1630661971828.jpg)" width="200" height="400" />
 
 ## Getting started:
 
