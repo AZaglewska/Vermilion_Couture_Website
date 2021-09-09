@@ -55,7 +55,7 @@ const Footer = ({ currentLanguage }) => {
       <StyledFooterDesigner>
         <p>© 2021 Vermilion Couture. All rights reserved</p>
         <p>Developed and powered by</p>{" "}
-        <a href="https://ari-ann.netlify.app/" target="_blank" rel="noreferrer">
+        <a href="https://ariann.netlify.app/" target="_blank" rel="noreferrer">
           <img src={AriAnnLogo} alt="Logo" />
         </a>
       </StyledFooterDesigner>
