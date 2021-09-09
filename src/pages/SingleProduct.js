@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Title from "../atoms/Title";
 import Text from "../atoms/Text";
 import Line from "../atoms/Line";
@@ -22,10 +22,37 @@ import {
 import "react-image-lightbox/style.css";
 
 const SingleProduct = (props) => {
-  const { currentLanguage } = props;
-  const { name, images, price, description } = props.location.state;
+  const [currentProduct, setCurrentProduct] = useState({});
   const [photoIndex, setPhotoIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
+  const { currentLanguage, state } = props;
+  const { images, price, name, description } = currentProduct;
+  const getProductByLink = () => {
+    const productName = props.location.pathname.slice(
+      9,
+      props.location.pathname.length
+    );
+
+    const allProducts = [
+      ...state.eveningCorset,
+      ...state.meshCorset,
+      ...state.otherCorset,
+      ...state.overbustCorset,
+      ...state.silkCorset,
+      ...state.underbustCorset,
+      ...state.weddingCorset,
+    ];
+
+    const singleProduct = allProducts.find(
+      (product) => product.name.replace(/\s/g, "") === productName
+    );
+
+    setCurrentProduct(singleProduct);
+  };
+
+  useEffect(() => {
+    getProductByLink();
+  }, []);
 
   return (
     <>
@@ -44,8 +71,8 @@ const SingleProduct = (props) => {
             onChange={(value) => setPhotoIndex(value)}
             selectedItem={photoIndex}
           >
-            <img src={images[0]} alt={name} />
-            <img src={images[1]} alt={name} />
+            <img src={images && images[0]} alt={name} />
+            <img src={images && images[1]} alt={name} />
           </SingleProductCarousel>
         </SingleProductCarouselWrapper>
         <SingleProductElements>
@@ -92,6 +119,7 @@ const SingleProduct = (props) => {
 
 const mapStateToProps = (state) => ({
   currentLanguage: state.currentLanguage,
+  state: state,
 });
 
 export default connect(mapStateToProps)(SingleProduct);
