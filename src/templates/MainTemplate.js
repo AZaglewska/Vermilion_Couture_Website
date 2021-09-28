@@ -22,7 +22,7 @@ const MainTemplate = ({ children }) => {
   useEffect(() => {
     setTimeout(() => {
       setIsShown(!isShown);
-    }, 7200);
+    }, 6000);
   }, []);
 
   return (
