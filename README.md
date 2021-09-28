@@ -78,11 +78,11 @@ The rest of the photos (especially in the fabrics and askedQuestions routes) wer
 
 - https://www.pexels.com/pl-pl/ and they are free for commercial use.
 
-- Vermilion Couture Logo is created by a graphic designer (https://www.instagram.com/ewuwka/, https://www.facebook.com/ewuwka) for the special request of the Vermilion Couture brand. The designer does not agree to copying, sharing and modifying brand logo. If you have any question about the logo please contact the Vermilion Couture by email: contact@vermilioncouture.com
+- Vermilion Couture Logo is created by a graphic designer (https://www.instagram.com/ewuwka/, https://www.facebook.com/ewuwka) for the special request of the Vermilion Couture brand. The Vermilion Couture brand holds copyright on corset logo. The designer does not agree to copying, sharing and modifying brand logo. If you have any question about the logo please contact the Vermilion Couture by email: contact@vermilioncouture.com
 
 - Icons were taken from https://www.flaticon.com/ and they are free for commercial use.
 
-- Ari-ann Logo is created by me using Adobe Illustrator and I do not agree to sharing, copying and modifying of the logo to other websites.
+- Ari-ann Logo is created by me using Adobe Illustrator.
 
 if you have any problems to run the project or have any other questions, feel free to contact me by e-mail:
 web.annazaglewska@gmail.com
