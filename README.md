@@ -31,7 +31,7 @@ https://www.vermilioncouture.com/
 
 - The website is fully responsive on the latest and the most popular phone models
 
-# A mobile view on Xiaomi redmi note 7:
+### A mobile view on Xiaomi redmi note 7:
 
 <img src="https://github.com/AZaglewska/Vermilion_Couture_Website/blob/main/src/assets/mobieView/1630661971850.jpg" width="200" height="400" /><img src="https://github.com/AZaglewska/Vermilion_Couture_Website/blob/main/src/assets/mobieView/1630661971799.jpg" width="200" height="400" >
 <img src="https://github.com/AZaglewska/Vermilion_Couture_Website/blob/main/src/assets/mobieView/1630661971828.jpg" width="200" height="400" /><img src="https://github.com/AZaglewska/Vermilion_Couture_Website/blob/main/src/assets/mobieView/1630661971820.jpg" width="200" height="400" />
@@ -59,6 +59,10 @@ If you checked your node and npm run a development server with:
 - npm start
 
 Browser will automatically open localhost:3000/
+
+## Future updates and modernisation:
+
+This website might be transformed into a full E-commerce shop with login and registation panel for clients and some ui features like: adding products to cart, deleting products, counting the prices an so on.
 
 ## Website Inspiration:
 
